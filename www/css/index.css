@@ -4,29 +4,34 @@ body{
 	margin:0;
 }
 
-.pagcontainer {
+#pagecontainer {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	z-index: 0;
+	overflow: hidden;
+}
+
+.page {
+	position: relative;
+	top: 0;
+	height: inherit;
+	width: inherit;
 }
 
 #pag1 {
-	position: relative;
+	background: #003333;
 	left: 0;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	background: rgb(224,224,224);
-	z-index: 3;
 }
 
 #pag2 {
-	position: relative;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	background: rgb(130,130,130);
-	z-index: 2;
+	background: #00CC00;
+	left: 100%;
+	top: -100%;
+}
+
+#pag3 {
+	background: #FF9900;
+	left: 200%;
+	top: -200%;
 }
