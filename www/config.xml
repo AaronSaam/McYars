@@ -15,7 +15,7 @@
 		McYars
 		</author>
 		
-		<gap:splash src="img/nepspoiler.png" gap:platform="android" width="800" height="1280" />
+		<gap:splash src="img/nepspoiler.png"/>
 		<gap:platform name="android" />
 		
 		<preference name="phonegap-version" value="3.3.0" />
