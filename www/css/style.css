@@ -13,24 +13,23 @@ body{
 
 .page {
 	position: relative;
-	top: 0;
 	height: inherit;
 	width: inherit;
+	background: #141414;
+	
 }
 
 #pag1 {
-	background: #003333;
 	left: 0;
 }
 
 #pag2 {
-	background: #00CC00;
 	left: 100%;
 	top: -100%;
+	background: #EFEFEF;
 }
 
 #pag3 {
-	background: #FF9900;
 	left: 200%;
 	top: -200%;
 }
