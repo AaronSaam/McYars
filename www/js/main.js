@@ -14,4 +14,6 @@ document.getElementById('kompas').style.transform = rotate(position.coords.headi
     //
     function onError(error) {
         document.getElementById("actionbar").style.background = "red"
-    }
+    	alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+	}
