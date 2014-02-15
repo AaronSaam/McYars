@@ -1,53 +1,38 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-	margin:0;
+	margin: 0;
+	padding: 0;
 }
 
 #actionbar {
-	height: 15px;
+	height: 54px;
+	max-height: 54px;
 	width: 100%;
-	background: #E3E3E3;
-	margin-bottom: 8px;
+	background-color: #141414;
 }
 
-#kompasbox {
+#locatieknop {
+	height: 100%;
+	max-height: 48px;
+	width: auto;
+}
+
+.kompasbox {
+	position: relative;
+	width: inherit;
+	max-width: inherit;
 	height: auto;
-	width: 100%;
+	padding: 10px;
 	text-align: center;
 }
 
 #kompas {
-	width: 80%;
-	height: auto;
-}
-
-#pagecontainer {
-	position: absolute;
-	height: 100%;
 	width: 100%;
-	z-index: 0;
+	max-width: 100%;
+	height: auto;			    
+	max-height: 100%;
+	width: auto;
 }
-
-.page {
-	position: relative;
-	height: inherit;
-	width: inherit;
-	background: #141414;
 	
-}
-
-#pag1 {
-	left: 0;
-}
-
-#pag2 {
-	left: 100%;
-	top: -100%;
-	background: #EFEFEF;
-}
-
-#pag3 {
-	left: 200%;
-	top: -200%;
-}
+	
