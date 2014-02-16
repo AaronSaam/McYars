@@ -3,36 +3,65 @@
 body{
 	margin: 0;
 	padding: 0;
+	background-color: #686868;
+	font-family: Roboto;
 }
 
+#achtergrond {
+	z-index: 0;
+	position: fixed;
+	height: 100%;
+	width: auto;
+	min-width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	opacity: 0.7;
+	
+}
+
+
+
 #actionbar {
-	height: 54px;
-	max-height: 54px;
-	width: 100%;
+	z-index: 1;
+	position: relative;
+	height: 44px;
+	max-height: 44px;
+	width: 100% - 20px;
+	text-align: right;
+	padding: 5px 10px;
 	background-color: #141414;
+	opacity: 0.1;
 }
 
 #locatieknop {
+	padding: 2px 0;
 	height: 100%;
-	max-height: 48px;
+	max-height: 40px;
 	width: auto;
 }
 
 .kompasbox {
+	padding: 5% 0;
 	position: relative;
+	padding: 10px;
+	
 	width: inherit;
 	max-width: inherit;
 	height: auto;
-	padding: 10px;
+	
+	
 	text-align: center;
 }
 
 #kompas {
+	padding: 10% 0;
 	width: 100%;
 	max-width: 100%;
 	height: auto;			    
 	max-height: 100%;
 	width: auto;
 }
+
+
 	
 	
