@@ -1,10 +1,11 @@
 // JavaScript Document
 function getLocation() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		document.getElementById('locatieknop').src = "img/ic_action_location_searching.png";
     }
 
 function onSuccess(position) {
-        document.getElementById("actionbar").style.background = "green"
+        document.getElementById('locatieknop').src = "img/ic_action_location_found.png";
 		var element = document.getElementById('geolocation');
 		alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
@@ -17,7 +18,7 @@ function onSuccess(position) {
 };
 
 function onError(error) {
-    document.getElementById("actionbar").style.background = "red"
+    document.getElementById('locatieknop').src = "img/ic_action_location_off.png";
     alert('code: '    + error.code    + '\n' +
     	'message: ' + error.message + '\n');
 	}
