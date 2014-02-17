@@ -3,18 +3,13 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-color: #141414;
-	font-family: Roboto;
-}
-
-#achtergrond {
-	position: fixed;
-	z-index: 0;
-	opacity: 0.7;
-
+	background-image: url(../img/RoermondBlur.png);
+	background-attachment: fixed;
+	background-position:center;
+	background-origin:content-box;
 	
-	height: 100%;
-	width: auto;
+	
+	font-family: Roboto;
 }
 
 #actionbar {
