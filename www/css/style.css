@@ -23,13 +23,17 @@ body{
 }
 
 .menu {
+	position: relative;
 	float: left;
 	height: 100%;
-	width: auto;
+	width: 50%;
+	top: -5px;
+	left: -10px;
 	padding: 5px 0;
+	text-align: left;
 }
 
-#menuimg {
+#menuimg{
 	padding: 10px 0;
 }
 
