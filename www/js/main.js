@@ -1,13 +1,12 @@
 // Variabelen
-var geenKompasWijzer = new Boolean(false);
-var geenLocatie = new Boolean(false);
+var geenKompasWijzer = new Boolean(0);
+var geenLocatie = new Boolean(0);
 
 function onLoad() {
 
 document.addEventListener("deviceready", getLocation, false);
 }
-
-if (geenLocatie = false) {
+if (geenLocatie == false) {
 
     function getLocation() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -27,13 +26,13 @@ function onSuccess(position) {
         'Speed: ' + position.coords.speed + '\n' +
         'Timestamp: ' + position.timestamp + '\n');
 
-    if (geenKompasWijzer = false) {
+    if (geenKompasWijzer == false) {
         var heading = position.coords.heading;
         if (heading = 'NaN' || heading == null) {
-            geenKompasWijzer = true;
+            geenKompasWijzer == true;
             alerticon();
         } else {
-            geenKompasWijzer = false;
+            geenKompasWijzer == false;
         };
     };
 };
