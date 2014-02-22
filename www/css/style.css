@@ -1,86 +1,79 @@
-@charset "utf-8";
-/* CSS Document */
-body{
-	margin: 0;
-	padding: 0;
-	background-color: #141414;
-	background-image: url(../img/RoermondBlur.png);
-	background-attachment: fixed;
-	background-position:center;
-	background-origin:content-box;
-	background-repeat: no-repeat;
-	color: white;
-	font-family: Roboto, Helvetica, Arial, sans-serif;
+@charset"utf-8";
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    background-image: url(../img/RoermondBlur.png);
+    background-attachment: fixed;
+    background-position:center;
+    background-origin:content-box;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
-
 .page {
-	position: static;
-	width: 100%;
-	height: 100%;
+    position: static;
+    width: 100%;
+    height: 100%;
 }
-
 #actionbar {
-	z-index: 0;
-	position: relative;
-	height: 44px;
-	max-height: 44px;
-	width: 100% - 20px;
-	text-align: right;
-	padding: 5px 10px;
+    z-index: 0;
+    position: relative;
+    height: 44px;
+    max-height: 44px;
+    width: 100% - 20px;
+    text-align: right;
+    padding: 5px 10px;
+    z-index: 5;
 }
-
 .menu {
+    display: button;
 	position: relative;
-	float: left;
-	height: 100%;
-	width: 50%;
-	top: -5px;
-	left: -10px;
-	padding: 5px 0;
-	text-align: left;
+    float: left;
+    height: 100%;
+    width: 50%;
+    top: -5px;
+    left: -10px;
+    padding: 5px 0;
+    text-align: left;
 }
-
-#menuimg{
-	padding: 10px 0;
+#menuimg {
+    padding: 10px 0;
 }
-
 .actionknop {
-	padding: 2px 0;
-	height: 100%;
-	max-height: 40px;
-	width: auto;
+    padding: 2px 0;
+    height: 100%;
+    max-height: 40px;
+    width: auto;
 }
-
 #alert {
-	visibility: hidden;
+    visibility: hidden;
 }
-
 .kompasbox {
-	position: relative;
-	width: 100% - 20px;
-	text-align: center;
-	padding: 10px;
-	height: auto;
+    position: absolute;
+    vertical-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
 }
-
-#kompas {
-	display: block;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 400px;
-	height: auto;
-	/* transform: rotate(50deg); */
-	overflow: hidden;
+.kompas {
+    position: absolute;
+    width: 93%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* transform: rotate(50deg); */
+    overflow: hidden;
 }
-
 #afstand {
-	position: static;
-	display: block;
-	margin: 10px auto;
-	padding: 10px 0;
-	width: 100%;
-	
-	color: white;
-	font-family: Roboto, Helvetica, Arial, sans-serif;
-	font-size: 32px;
+    margin: auto;
+    color: white;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 30px;
 }
