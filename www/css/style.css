@@ -9,14 +9,21 @@
     background-origin:content-box;
     background-repeat: no-repeat;
     color: white;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .page {
     position: static;
     width: 100%;
     height: 100%;
+    visibility: hidden;
 }
-#actionbar {
+.actionbar {
     z-index: 0;
     position: relative;
     height: 44px;
@@ -26,9 +33,9 @@
     padding: 5px 10px;
     z-index: 5;
 }
-.menu {
+.menuknop {
     display: button;
-	position: relative;
+    position: relative;
     float: left;
     height: 100%;
     width: 50%;
@@ -37,7 +44,7 @@
     padding: 5px 0;
     text-align: left;
 }
-#menuimg {
+#button_menu {
     padding: 10px 0;
 }
 .actionknop {
@@ -45,35 +52,34 @@
     height: 100%;
     max-height: 40px;
     width: auto;
-}
-#alert {
     visibility: hidden;
 }
-.kompasbox {
-    position: absolute;
-    vertical-align: center;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    z-index: 1;
-}
-.kompas {
-    position: absolute;
-    width: 93%;
-    max-width: 400px;
+#load_error_locatie_simple {
+    width: 100% - 20px;
     height: auto;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    /* transform: rotate(50deg); */
-    overflow: hidden;
+    padding: 15px 10px;
+    margin: 0 0 5px 0;
+    background: #141414;
 }
-#afstand {
-    margin: auto;
-    color: white;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 30px;
+#load_error_locatie_simple h1 {
+    margin: 0 0 5px 0;
+}
+#load_error_locatie_simple p {
+    margin: 0;
+}
+#load_error_locatie_code {
+    width: 100% - 20px;
+    height: auto;
+    padding: 5px 10px;
+    margin: 0 0 15px 0;
+    background: white;
+    color: #888;
+    font-size: 13px;
+}
+#load_error_locatie_button {
+    width: 100% - 10px;
+    padding: 1px;
+    margin: 0 5px;
+    color: #141414;
+    text-align: center;
 }

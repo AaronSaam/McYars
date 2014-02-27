@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.kompasbox {
+    position: absolute;
+    vertical-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+}
+.kompas {
+    position: absolute;
+    width: 93%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* transform: rotate(50deg); */
+    overflow: hidden;
+}
+#afstand {
+    margin: auto;
+    color: white;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 30px;
+}
