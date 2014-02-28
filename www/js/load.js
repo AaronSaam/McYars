@@ -1,6 +1,5 @@
 var bol_wijzer = new Boolean(true);
 var bol_locatie = new Boolean(true);
-var page
 
 function load_actionbar() {
     document.getElementById('button_locatie').src = "img/ic_action_location_searching.png";
