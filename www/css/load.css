@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+#load_error_locatie_simple {
+    width: 100% - 20px;
+    height: auto;
+    padding: 15px 10px 20px 10px;
+    margin: 0 0 5px 0;
+    background: #141414;
+}
+#load_error_locatie_simple h1 {
+    margin: 0 0 5px 0;
+}
+#load_error_locatie_simple p {
+    margin: 0;
+}
+#load_error_locatie_code {
+    width: 100% - 20px;
+    height: auto;
+    padding: 10px 10px;
+    margin: 0 0 10px 0;
+    background: white;
+    color: #888;
+    font-size: 13px;
+}
+#load_error_locatie_button {
+    padding: 10px;
+    color: #141414;	
+}
