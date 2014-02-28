@@ -21,7 +21,7 @@ function load_error_locatie(error) {
     bol_locatie = false;
     document.getElementById('load_error_locatie').style.visibility = 'visible';
     document.getElementById('button_locatie').src = "img/ic_action_location_off.png";
-    document.getElementById('load_error_locatie_code').innerHTML = 'ERROR ' + error.code + '\n' + error.message + '\n';
+    document.getElementById('load_error_locatie_code').innerHTML = 'ERROR ' + error.code + ' ' + error.message;
 };
 
 function load_error_locatie_button() {
