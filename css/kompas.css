@@ -1,8 +1,7 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 .kompasbox {
     position: absolute;
-    vertical-align: center;
     top: 0;
     width: 100%;
     height: 100%;
@@ -34,7 +33,7 @@
 	bottom: 0;
 	z-index: 10;
 	color: white;
-	padding: 0 10px 10px; 10px;
+	padding: 0 10px 10px 10px;
 	margin: 0;
 	opacity: 0.6;
 }

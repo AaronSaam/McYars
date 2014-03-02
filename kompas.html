@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta name="viewport" content="width=device-width,
+
+<head>
+    <meta name="viewport" content="width=device-width,
                                    initial-scale=1.0,
                                    maximum-scale=1.0,
                                    user-scalable=no">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/kompas.css">
-        
-        <script src="js/main.js" type="text/javascript"></script>
-        <script src="taffydb-master/taffy.js" type="text/javascript"></script>
-        <script src="js/kompas.js" type="text/javascript"></script>
-    </head>
-    
-    <body>   
-        
-       	<div class="actionbar">
-            <a href="index.html"><div class="menuknop">
-                <img id="button_menu" src="img/ic_action_previous_item.png">
-            </div></a>
-            <img class="actionknop" id="button_alert" src="img/ic_action_refresh.png"  style="visibility: visible;" onClick="test()">
-            <img class="actionknop" id="button_locatie">
-        </div>
-           
-       	<div class="kompasbox">
-       		<img class="kompas" src="img/KompasBlauw.png">
-     		<img class="kompas" id="wijzer" src="img/KompasWijzer.png">
-   			<p id="afstand"></p>
-      	</div>
-        
-        <div id="footer">
-        <p id="footer_accuracy">69%</p>
-        <p id="footer_error">#2 - User denied geolocation </p>
-        </p>
-        </div>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/kompas.css">
 
-    </body>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="taffydb-master/taffy.js" type="text/javascript"></script>
+    <script src="js/kompas.js" type="text/javascript"></script>
+    <title>ROERMOND:BUITEN</title>
+</head>
+
+<body>
+
+    <div class="actionbar">
+        <a href="index.html">
+            <div class="menuknop">
+                <img id="button_menu" src="img/ic_action_previous_item.png">
+            </div>
+        </a>
+        <img class="actionknop" id="button_alert">
+        <img class="actionknop" id="button_locatie" src="img/ic_action_location_searching.png" style="visibility: visible;" onclick="getLocation()">
+    </div>
+
+    <div class="kompasbox">
+        <img class="kompas" id="kompasbg" src="img/KompasGrijs.png">
+        <img class="kompas" id="wijzer" src="img/KompasWijzer.png">
+        <p id="afstand"></p>
+    </div>
+
+    <div id="footer">
+        <p id="footer_accuracy"></p>
+        <p id="footer_error"></p>
+    </div>
+
+</body>
 
 </html>
