@@ -1,4 +1,4 @@
-var bol_wijzer = new Boolean(true);
+var bol_wijzer = 1;
 var bol_locatie = new Boolean(false);
 
 // LOAD
@@ -15,7 +15,7 @@ function load_succes_locatie(position) {
             
 	heading = position.coords.heading;
     if (heading == 'NaN' || heading == null) {
-    	bol_wijzer = false;
+    	bol_wijzer = 2;
     };
 };
 
