@@ -28,3 +28,25 @@
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 30px;
 }
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+	color: white;
+	padding: 0 10px 10px; 10px;
+	margin: 0;
+	opacity: 0.6;
+}
+
+#footer p {
+	margin: 0;	
+}
+
+#footer_accuracy {
+	font-size: 26px;
+}
+
+#footer_error {
+	font-size: 18px;	
+}
