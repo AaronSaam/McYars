@@ -32,12 +32,14 @@ function onSuccess(position) {
 
     if (bol_wijzer == true) {
         heading = position.coords.heading;
-        alert(heading);
         if (IsNumeric(heading) == false || heading == null) {
-            alert(heading);
             document.getElementById('wijzer').style.visibility = 'hidden';
             bol_wijzer = false;
         };
+	
+	if (bol_wijzer == true) {
+		document.getElementById('wijzer').style.transform = 'rotate(' + position.coords.heading + 'deg)';	
+	};
     };
 }
 
