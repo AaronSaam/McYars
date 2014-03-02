@@ -7,12 +7,12 @@ var randomnumber=Math.floor(Math.random()*plek().count()+1);
 alert(randomnumber) };
 
 function getLocation() {
-navigator.geolocation.getCurrentPosition(onSuccess, onError);  
+	navigator.geolocation.watchPosition(onSuccess, onError);
 };
 
-function onSuccess() {
+function onSuccess(position) {
 		document.getElementById('button_locatie').src = "img/ic_action_location_found.png";
-		document.getElementById('footer_error').innerHTML = position.coords.accuracy;
+		document.getElementById('footer_error').innerHTML = position.coords.accuracy + '%';
 		if (bol_locatie == false) {
 			bol_locatie = true;
 			document.getElementById('kompasbg').src = "img/KompasBlauw.png";
