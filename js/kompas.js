@@ -12,7 +12,7 @@ function getLocation() {
 
 function onSuccess(position) {
 		document.getElementById('button_locatie').src = "img/ic_action_location_found.png";
-		document.getElementById('footer_error').innerHTML = position.coords.accuracy + '%';
+		document.getElementById('footer_accuracy').innerHTML = position.coords.accuracy + '%';
 		if (bol_locatie == false) {
 			bol_locatie = true;
 			document.getElementById('kompasbg').src = "img/KompasBlauw.png";
