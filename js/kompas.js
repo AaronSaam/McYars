@@ -32,8 +32,9 @@ function onSuccess(position) {
 
     if (bol_wijzer == true) {
         heading = position.coords.heading;
-        if (isNaN(heading) == false || heading == null) {
+        if (isNaN(heading) || heading == null) {
             document.getElementById('wijzer').style.visibility = 'hidden';
+			document.getElementById('footer_error').innerHTML = "Richting niet ondersteund";
             bol_wijzer = false;
         };
 	
