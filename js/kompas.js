@@ -39,7 +39,7 @@ function onSuccess(position) {
         };
 	
 	if (bol_wijzer == true) {
-		document.getElementById('wijzer').style = 'transform: rotate(' + position.coords.heading + 'deg); -moz-transform: rotate(' + position.coords.heading + 'deg); -o-transform: rotate(' + position.coords.heading + 'deg) -webkit-transform: rotate(' + position.coords.heading + 'deg)' ;	
+		document.getElementById('wijzer').style = '-webkit-transform: rotate(' + position.coords.heading + 'deg); -o-transform: rotate(' + position.coords.heading + 'deg); transform: rotate(' + position.coords.heading + 'deg); -moz-transform: rotate(' + position.coords.heading + 'deg); -ms-transform: rotate(' + position.coords.heading + 'deg)';	
 	};
     };
 }
