@@ -18,7 +18,7 @@ var randomnumber=Math.floor(Math.random()*plek().count()+1);
 alert(randomnumber) };*/
 
 function getLocation() {
-    navigator.geolocation.watchPosition(onSuccess, onError);
+	navigator.geolocation.watchPosition(onSuccess, onError);
 };
 
 function onSuccess(position) {
