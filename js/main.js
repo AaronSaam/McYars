@@ -14,7 +14,7 @@ function load_succes_locatie(position) {
     document.getElementById('button_locatie').src = "img/ic_action_location_found.png";
             
 	heading = position.coords.heading;
-    if (heading == 'NaN' || heading == null) {
+    if (isNaN(heading) || heading == null) {
     	bol_wijzer = 2;
     };
 };
