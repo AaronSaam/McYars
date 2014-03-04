@@ -9,7 +9,7 @@
     background-origin:content-box;
     background-repeat: no-repeat;
     color: white;
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -17,6 +17,11 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+p {
+margin: 0;	
+}
+
 button {
     font-family: Roboto, Helvetica, sans-serif;
 	padding: 10px;
@@ -24,17 +29,15 @@ button {
 }
 
 .actionbar {
-    z-index: 0;
-    position: relative;
+	position: relative;
     height: 44px;
     max-height: 44px;
     width: 100% - 20px;
     text-align: right;
     padding: 5px 10px;
-    z-index: 5;
+	z-index: 2;
 }
 .menuknop {
-    display: button;
     position: relative;
     float: left;
     height: 100%;
