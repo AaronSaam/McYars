@@ -17,12 +17,35 @@
     <body>
         <div class="actionbar">
             <img class="actionknop" id="button_alert">
-            <img class="actionknop" id="button_locatie">
+            <img class="actionknop" id="button_locatie" src="img/ic_action_location_searching.png" style="visibility: visible;">
         </div>
         
-        <a href="kompas.html"><button>Kompas</button></a>
-        <a href="info.html"><button>Info</button></a>
-    
+        <div class='keuzeknop' style="margin-bottom: 20px; height: auto;">
+        <a href="info.html"><button>info</button></a>
+        <a href='kompas.html'><button>kompas</button></a>
+        <a href="map.html"><button>map</button></a>
+        </div>
+        <div class='keuzeknop' id='k1' onClick="keuze(1)">
+        <table>
+        <td>Munsterkerk</td> 
+        </table>    
+        </div>
+        <div class='keuzeknop' id='k2' onClick="keuze(2)">
+        <table>
+        <td>Sint-Christoffelkathedraal</td> 
+        </table>    
+        </div>
+        <div class='keuzeknop' id='k3' onClick="keuze(3)">
+        <table>
+        <td>Minderbroederskerk</td> 
+        </table>    
+        </div>
+        <div class='keuzeknop' id='k4' onClick="keuze(4)">
+        <table>
+        <td>Stadhuis</td> 
+        </table>    
+        </div>
+        
     </body>
 
 </html>

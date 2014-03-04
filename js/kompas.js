@@ -1,19 +1,7 @@
 var bol_wijzer = new Boolean(true);
 var bol_locatie = new Boolean(false);
 
-var plek = TAFFY([{
-    naam: 'Munsterkerk',
-    adres: 'Munsterplein',
-    Architect: 'Pierre Cuypers, Jos Hermans',
-    N: '51.113700',
-    O: '5.591900',
-
-}, {
-    naam: 'Sint-Christoffelkathedraal',
-    N: '51.114725',
-    O: '5.590401',
-    adres: 'Kraanpoort'
-}]);
+var plek = [['Munsterkerk','Munsterplein','Pierre Cuypers' + '\n' + 'Jos Hermans','51.113700','5.591900']['Sint-Christoffelkathedraal','Kraanpoort','Pierre Cuypers','51.114725','5.590401']];
 
 /*function test() {
 var randomnumber=Math.floor(Math.random()*plek().count()+1);
@@ -41,6 +29,7 @@ function onSuccess(position) {
         };
 
         if (bol_wijzer == true) {
+			document.getElementById('wijzer').style.visibility = 'visible';
             document.getElementById('wijzer').style = '-webkit-transform: rotate(' + position.coords.heading + 'deg); -o-transform: rotate(' + position.coords.heading + 'deg); transform: rotate(' + position.coords.heading + 'deg); -moz-transform: rotate(' + position.coords.heading + 'deg); -ms-transform: rotate(' + position.coords.heading + 'deg)';
         };
     };
@@ -54,4 +43,12 @@ function onError(error) {
         bol_locatie = false;
         document.getElementById('kompasbg').src = "img/KompasGrijs.png";
     };
+};
+
+//INFORMATIE
+plek_aanwezig = 1;
+
+function plek_info(plek_aanwezig) {
+
+document.getElementById('plek_naam').innerHTML = plek[1][0];
 }

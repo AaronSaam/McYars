@@ -1,22 +1,10 @@
-function load_actionbar() {
-    document.getElementById('button_locatie').src = "img/ic_action_location_searching.png";
-    document.getElementById('button_locatie').style.visibility = 'visible';
+arr_keuze = [1, 1];
 
-    navigator.geolocation.getCurrentPosition(load_succes_locatie, load_error_locatie);  
-};
-
-
-function load_succes_locatie(position) {
-    document.getElementById('button_locatie').src = "img/ic_action_location_found.png";
-            
-	heading = position.coords.heading;
-    if (heading == 'NaN' || heading == null) {
-    	bol_wijzer = false;
-    };
-};
-
-function load_error_locatie(error) {
-    bol_locatie = false;
-    document.getElementById('button_locatie').src = "img/ic_action_location_off.png";
-    alert('ERROR ' + error.code + '\n' + error.message);
-};
+function keuze(k) {
+	arr_keuze[1] = k
+	document.getElementById('k'+arr_keuze[0]).style.background = 'white';
+	document.getElementById('k'+arr_keuze[0]).style.color = 'black';
+	document.getElementById('k'+arr_keuze[1]).style.background = 'royalblue';
+	document.getElementById('k'+arr_keuze[1]).style.color = 'white';
+	arr_keuze[0] = arr_keuze[1]
+}
