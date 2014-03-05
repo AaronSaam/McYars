@@ -21,9 +21,20 @@
     overflow: hidden;
 }
 #afstand {
+    position: absolute;
+	display: table;
+	vertical-align: center;
+	width: 93%;
+    max-width: 400px;
+    height: auto;
     margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
     color: white;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto Light, Roboto, Helvetica, Arial, sans-serif;
     font-size: 30px;
 }
 
