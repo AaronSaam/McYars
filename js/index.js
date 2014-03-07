@@ -15,11 +15,30 @@ function keuze(bestemming) {
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
 	
-	var long = position.coords.longitude;
-	var lat = position.coords.latitude;
-	var hoek = (long_bestemming - long) / (lat_bestemming - lat);
+	var long = long_bestemming - position.coords.longitude;
+	var lat = lat_bestemming - position.coords.latitude;
+	var hoek = lat / long;
 	var hoek_bestemming = Math.atan(hoek)*(180/Math.PI);
-	var draaihoek = position.coords.heading + hoek_bestemming;
+	
+	if (lat > 0) {
+		if (long > 0) {
+			var lat_bestemming = hoek_bestemming;
+		}
+		if (long < 0) {
+			var lat_bestemming = -180 + hoek_bestemming;	
+		}
+	}
+	if (lat < 0) {
+		if (long > 0) {
+			var lat_bestemming = -hoek_bestemming;
+		}
+		if (long < 0) {
+			var lat_bestemming = 180 - hoek_bestemming;	
+		}
+	}
+	
+	
+	var draaihoek = position.coords.heading + lat_bestemming;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
 
