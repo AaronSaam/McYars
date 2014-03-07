@@ -20,24 +20,39 @@ function getLocatie(position) {
 	var hoek = lat / long;
 	var hoek_bestemming = Math.atan(hoek)*(180/Math.PI);
 	
-	if (lat > 0) {
+	switch(lat) {
+	
+	case lat >0:
 		if (long > 0) {
 			var lat_bestemming = hoek_bestemming;
 		}
 		if (long < 0) {
 			var lat_bestemming = -180 + hoek_bestemming;	
 		}
-	}
-	if (lat < 0) {
+		if (long = 0) {
+			var lat_bestemming = 90;
+		}
+	
+	case lat < 0:
 		if (long > 0) {
 			var lat_bestemming = -hoek_bestemming;
 		}
 		if (long < 0) {
 			var lat_bestemming = 180 - hoek_bestemming;	
 		}
+		if (long = 0) {
+			var lat_bestemming = -90;	
+		}
+	
+	case lat = 0:
+		if (long > 0) {
+			var lat_bestemming = 0;
+		}
+		if (long < 0) {
+			var lat_bestemming = 180;	
+		}
 	}
-	
-	
+
 	var draaihoek = position.coords.heading + lat_bestemming;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
