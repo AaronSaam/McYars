@@ -1,12 +1,14 @@
 var bestemming = -1;
+var lat_bestemming;
+var long_bestemming;
 
 var plek = [
 ['Munsterkerk','Munsterplein','Pierre Cuypers + Jos Hermans','51.113700','5.591900'],
 ['Sint-Christoffelkathedraal','Kraanpoort','Pierre Cuypers','51.114725','5.590401'] ];
 
 function keuze(bestemming) {
-	var lat_bestemming = plek[bestemming][3];
-	var long_bestemming = plek[bestemming][4];
+	lat_bestemming = plek[bestemming][3];
+	long_bestemming = plek[bestemming][4];
 	navigator.geolocation.watchPosition(getLocatie, errorLocatie, {timeout: 5000, enableHighAccuracy: true});
 }
 
