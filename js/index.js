@@ -1,5 +1,5 @@
 var bestemming = -1;
-var lat_bestemming = 1;
+var lat_bestemming;
 var long_bestemming;
 
 var plek = [
@@ -7,8 +7,8 @@ var plek = [
 ['Sint-Christoffelkathedraal', 51.196458, 5.984447,'Kraanpoort','Pierre Cuypers'] ];
 
 function keuze(bestemming) {
-	lat_bestemming = plek[bestemming][1];
-	long_bestemming = plek[bestemming][2];
+	var lat_bestemming = plek[bestemming][1];
+	var long_bestemming = plek[bestemming][2];
 	navigator.geolocation.watchPosition(getLocatie, errorLocatie, {frequency: 100, timeout: 5000, enableHighAccuracy: true});
 }
 
