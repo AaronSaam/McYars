@@ -21,13 +21,13 @@ function keuze(plek_keuze) {
 
 // Kompas
 function getLocation() {
-    navigator.geolocation.watchPosition(onSuccess, onError);
+    navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 5000, enableHighAccuracy: true });
 };
 
 function onSuccess(position) {
     document.getElementById('button_locatie').src = "img/ic_action_location_found.png";
     document.getElementById('footer_accuracy').innerHTML = Math.round(position.coords.accuracy) + '%';
-
+	
     if (bol_locatie == false) {
         bol_locatie = true;
         document.getElementById('kompasbg').src = "img/KompasBlauw.png";
@@ -40,20 +40,20 @@ function onSuccess(position) {
             document.getElementById('footer_error').innerHTML = "Richting niet ondersteund";
             bol_wijzer = false;
         };
+	};
 
-		heading = 50;
-		document.getElementById('afstand').innerHTML = heading;
-        if (bol_wijzer == true) {
-			document.getElementById('wijzer').style.visibility = 'visible';
+    if (bol_wijzer == true) {
+			heading = 50;
+			document.getElementById('afstand').innerHTML = heading;
+			document.getElementById('footer_error').innerHTML = " ";
             document.getElementById('wijzer').style = '-webkit-transform: rotate(' +  + 'deg); -o-transform: rotate(' + heading + 'deg); transform: rotate(' + heading + 'deg); -moz-transform: rotate(' + heading + 'deg); -ms-transform: rotate(' + heading + 'deg)';
         };
     };
-}
 
 function onError(error) {
     document.getElementById('button_locatie').src = "img/ic_action_location_off.png";
     document.getElementById('footer_accuracy').innerHTML = 'Error';
-    document.getElementById('footer_error').innerHTML = '#' + error.code + ' - ' + error.message;
+    document.getElementById('footer_error').innerHTML = error.message + ' (#' + error.code + ')';
     if (bol_locatie == true) {
         bol_locatie = false;
         document.getElementById('kompasbg').src = "img/KompasGrijs.png";

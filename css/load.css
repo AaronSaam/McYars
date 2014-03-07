@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 #keuzenaam {
+	margin-top: 9px;
 	padding: 0 10px;
 	color: white;
 	overflow: hidden;
