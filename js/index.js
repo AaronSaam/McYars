@@ -14,8 +14,8 @@ function keuze(bestemming) {
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	var hoek = (position.coords.latitude - lat_bestemming)/(position.coords.longitude - long_bestemming);
-	var hoek_bestemming = Math.acos(hoek *(180/Math.PI));
+	var hoek = (position.coords.longitude - long_bestemming) /(position.coords.latitude - lat_bestemming);
+	var hoek_bestemming = Math.atan(hoek *(180/Math.PI));
 	var draaihoek = position.coords.heading + hoek_bestemming;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
