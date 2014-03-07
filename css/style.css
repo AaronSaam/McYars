@@ -4,3 +4,7 @@
 #keuzes li a {
 	font-weight: normal;	
 }
+
+#wijzer {
+	overflow: hidden;	
+}
