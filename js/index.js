@@ -14,7 +14,6 @@ function keuze(bestemming) {
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	alert(lat_bestemming)
 	var hoek = (position.coords.latitude - lat_bestemming)/(position.coords.longitude - long_bestemming);
 	var hoek_bestemming = Math.acos(hoek *(180/Math.PI));
 	var draaihoek = position.coords.heading + hoek_bestemming;
