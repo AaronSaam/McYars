@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+        <meta name="viewport" content="width=device-width,
+                             			initial-scale=1.0,
+                              			maximum-scale=1.0,
+                                   		user-scalable=no">
+		<title>ROERMOND:BUITEN</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"  />
+        
+		<link rel="stylesheet" href="themes/Flat.min.css" />
+		<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css"/>
+		<script src="jquery/jquery-1.10.2.min.js"></script>
+		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+        
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+	</head>
+    
+	<body>
+    	<div data-role="page">
+            <div data-role="header">
+            	<div class="ui-title">ROERMOND:BUITEN</div>
+            </div>
+            
+            <div data-role="navbar">
+            	<ul>
+					<li><a href="kaart.html" class="ui-btn-active ui-state-persist">Kaart</a></li>
+					<li><a href="kompas.html">Kompas</a></li>
+                    <li><a href="instellingen.html">Instellingen</a></li>
+				</ul>
+            </div>
+       		<div id='map'>
+            </div>
+
+
+        </div>
+	</body>
+	<!--<script>
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+    .setView([40, -74.50], 9);
+</script>-->
+</html>

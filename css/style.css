@@ -1,63 +1,6 @@
-@charset"utf-8";
- body {
-    margin: 0;
-    padding: 0;
-    background-color: #141414;
-    background-image: url(../img/RoermondBlur.png);
-    background-attachment: fixed;
-    background-position:center;
-    background-origin:content-box;
-    background-repeat: no-repeat;
-    color: white;
-    font-family: Roboto, sans-serif;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+@charset "utf-8";
+#map { position:absolute; top: 78px; bottom: 0; width:100%; }
 
-p {
-margin: 0;	
-}
-
-button {
-    font-family: Roboto, Helvetica, sans-serif;
-	padding: 10px;
-    color: #141414;	
-}
-
-.actionbar {
-	position: relative;
-    height: 44px;
-    max-height: 44px;
-    width: 100% - 20px;
-    text-align: right;
-    padding: 5px 10px;
-	z-index: 2;
-}
-.menuknop {
-    position: relative;
-    float: left;
-    height: 100%;
-    width: 50%;
-    top: -5px;
-    left: -10px;
-    padding: 5px 0;
-    text-align: left;
-}
-#button_menu {
-	padding: 2px 0;
-    height: 100%;
-    max-height: 40px;
-    width: auto;
-}
-
-.actionknop {
-    padding: 2px 0;
-    height: 100%;
-    max-height: 40px;
-    width: auto;
-    visibility: hidden;
+#keuzes li a {
+	font-weight: normal;	
 }

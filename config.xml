@@ -3,7 +3,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.wordpress.mcyars.roermondbuiten"
-        version   = "0.0.2">
+        version   = "0.0.1">
 		
 		<name>ROERMOND:BUITEN</name>
 		
@@ -21,5 +21,7 @@
 		<preference name="orientation" value="portrait" />
 		
 		<gap:plugin name="org.apache.cordova.geolocation" />
+		<feature name="http://api.phonegap.com/1.0/geolocation"/>
+
 
 </widget>
