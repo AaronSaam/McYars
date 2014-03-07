@@ -9,12 +9,14 @@ var plek = [
 function keuze(bestemming) {
 	lat_bestemming = plek[bestemming][3];
 	long_bestemming = plek[bestemming][4];
-	navigator.geolocation.watchPosition(getLocatie, errorLocatie, {timeout: 5000, enableHighAccuracy: true});
+	navigator.geolocation.watchPosition(getLocatie, errorLocatie, {frequency: 100, timeout: 5000, enableHighAccuracy: true});
 }
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	var hoek_bestemming = Math.acos((position.coords.latitude - lat_bestemming)/(position.coords.longitude - long_bestemming));
+	alert(lat_bestemming)
+	var hoek = (position.coords.latitude - lat_bestemming)/(position.coords.longitude - long_bestemming);
+	var hoek_bestemming = Math.acos(hoek *(180/Math.PI));
 	var draaihoek = position.coords.heading + hoek_bestemming;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
