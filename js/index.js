@@ -18,7 +18,7 @@ function getLocatie(position) {
 	var long = position.coords.longitude;
 	var lat = position.coords.latitude;
 	var hoek = (long_bestemming - long) / (lat_bestemming - lat);
-	var hoek_bestemming = Math.atan(hoek *(180/Math.PI));
+	var hoek_bestemming = Math.atan(hoek)*(180/Math.PI);
 	var draaihoek = position.coords.heading + hoek_bestemming;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
