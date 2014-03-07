@@ -33,7 +33,7 @@
 	     				<h3>Begin Navigatie</h3>
 	      				<p>Kies uit wandelroutes in Roermond</p>
 	      			</a></li>
-	   				<li><a href="#">
+	   				<li><a href="#hoofdmenu_informatie">
 	      				<h3>Informatie</h3>
 	      				<p>Informatie over de stad Roermond</p>
 	      			</a></li>
@@ -51,8 +51,8 @@
                 <ul data-role="listview" id='keuzes'>
 	    			<li><a href="kompas.html" onClick="keuze(0)">Munsterkerk</a></li>
 	   				<li><a href="kompas.html" onClick="keuze(1)">Sint-Christoffelkathedraal</a></li>
-                    <li><a href="kompas.html" onClick="keuze(2)">Minderbroederskerk</a></li>
-					<!--<li><a href="#">Stadhuis</a></li>
+                    <!--<li><a href="kompas.html" onClick="keuze(2)">Minderbroederskerk</a></li>
+					<li><a href="#">Stadhuis</a></li>
 					<li><a href="#">De Kiosk</a></li>
 					<li><a href="#">Ursulakapel</a></li>
 					<li><a href="#">Caroluskapel</a></li>
@@ -72,6 +72,39 @@
 					<li><a href="#">Teeken en ambachtschool</a></li>-->
       			</ul>	
         	</div>
+            </div>
+        </div>
+        <div data-role="page" id="hoofdmenu_informatie">
+            <div class="ui-btn-up-b" data-role="header">
+                 <div class="ui-title">ROERMOND:BUITEN</div>
+ 				 <a href="#hoofdmenu" style="" data-icon="arrow-l" data-role="button">Terug</a>
+            </div>
+            
+            <div data-role="content">
+				<p>Roermond is altijd een mooie/drukke stad geweest. Vroeger was Roermond een grote  handelsplaats. Nu nog steeds komen iedere dag duizenden mensen naar de  binnenstad van Roermond om te shoppen. In de binnenstad van Roermond staan ook nog prachtige oude gebouwen, die niet alleen de stad laten bloeien en kleur geven maar ook  haar geschiedenis verteld, die je overigens nog steeds kunt bezichtigen. Je kunt daarom in Roermond prachtige wandelroutes lopen. Deze app brengt die wandelroutes snel en makkelijk in beeld.<br><strong><em>Roermond, That's All You Need</em></strong>
+                </p>       
+            </div>
+           	<div class="pagebottom">
+                <ul data-role="listview">
+					<li><a href="#hoofdmenu_contact">
+        			<h3>Contact</h3>
+        			<p>Contact opnemen met ons? Doe het graag hier!</p>
+      				</a></li>
+            	</ul>
+            </div>
+        </div>
+        
+        <div data-role="page" id="hoofdmenu_contact">
+            <div class="ui-btn-up-b" data-role="header">
+                 <div class="ui-title">ROERMOND:BUITEN</div>
+ <a href="#hoofdmenu_informatie" data-icon="arrow-l" data-role="button">Terug</a>
+
+            </div>
+            <div data-role="content">       
+                <form action="McYars@hotmail.com" method="get" id="Contact">
+                    <textarea></textarea>
+                    <input name="Verzenden" type="submit" value="Verzenden" >
+                </form>
             </div>
         </div>
 	</body>

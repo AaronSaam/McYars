@@ -1,9 +1,9 @@
 var bestemming = -1;
-var lat_bestemming;
+var lat_bestemming = 1;
 var long_bestemming;
 
 var plek = [
-['Munsterkerk',51.193611, 5.988611,'Munsterplein','Pierre Cuypers + Jos Hermans'],
+['Munsterkerk', 51.193611, 5.988611,'Munsterplein','Pierre Cuypers + Jos Hermans'],
 ['Sint-Christoffelkathedraal', 51.196458, 5.984447,'Kraanpoort','Pierre Cuypers'] ];
 
 function keuze(bestemming) {
@@ -14,7 +14,6 @@ function keuze(bestemming) {
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	
 	var long = long_bestemming - position.coords.longitude;
 	var lat = lat_bestemming - position.coords.latitude;
 	var hoek = lat / long;

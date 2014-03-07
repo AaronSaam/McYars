@@ -1,4 +1,10 @@
 ﻿@charset "utf-8";
+.pagebottom {
+	position: absolute;
+	width: 100%;
+	bottom: 0;	
+}
+
 .kompas {
     position: absolute;
     width: 93%;
