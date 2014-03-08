@@ -1,57 +1,56 @@
-var bestemming = -1;
-var lat_bestemming;
-var long_bestemming;
+var bestemming_lat;
+var bestemming_long;
 
 var plek = [
 ['Munsterkerk', 51.193611, 5.988611,'Munsterplein','Pierre Cuypers + Jos Hermans'],
 ['Sint-Christoffelkathedraal', 51.196458, 5.984447,'Kraanpoort','Pierre Cuypers'] ];
 
 function keuze(bestemming) {
-	var lat_bestemming = plek[bestemming][1];
-	var long_bestemming = plek[bestemming][2];
+	bestemming_lat = plek[bestemming][1];
+	bestemming_long = plek[bestemming][2];
 	navigator.geolocation.watchPosition(getLocatie, errorLocatie, {frequency: 100, timeout: 5000, enableHighAccuracy: true});
 }
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	var long = long_bestemming - position.coords.longitude;
-	var lat = lat_bestemming - position.coords.latitude;
+	var long = bestemming_long - position.coords.longitude;
+	var lat = bestemming_lat - position.coords.latitude;
 	var hoek = lat / long;
 	var hoek_bestemming = Math.atan(hoek)*(180/Math.PI);
 	
 	if (lat > 0) {
 		if (long > 0) {
-			var lat_bestemming = hoek_bestemming;
+			var bestemming_lat = hoek_bestemming;
 		}
 		if (long < 0) {
-			var lat_bestemming = -180 + hoek_bestemming;	
+			var bestemming_lat = -180 + hoek_bestemming;	
 		}
 		if (long = 0) {
-			var lat_bestemming = 90;
+			var bestemming_lat = 90;
 		}
 	}
 	if (lat < 0) {
 		if (long > 0) {
-			var lat_bestemming = -hoek_bestemming;
+			var bestemming_lat = -hoek_bestemming;
 		}
 		if (long < 0) {
-			var lat_bestemming = 180 - hoek_bestemming;	
+			var bestemming_lat = 180 - hoek_bestemming;	
 		}
 		if (long = 0) {
-			var lat_bestemming = -90;	
+			var bestemming_lat = -90;	
 		}
 	}
 	
 	if (lat = 0) {
 		if (long > 0) {
-			var lat_bestemming = 0;
+			var bestemming_lat = 0;
 		}
 		if (long < 0) {
-			var lat_bestemming = 180;	
+			var bestemming_lat = 180;	
 		}
 	}
 
-	var draaihoek = position.coords.heading + lat_bestemming;
+	var draaihoek = position.coords.heading + bestemming_lat;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
 
