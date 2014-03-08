@@ -16,44 +16,38 @@ function getLocatie(position) {
 	bestemming_long = plek[0][2];
 	
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	var long = bestemming_long - position.coords.longitude;
-	var lat = bestemming_lat - position.coords.latitude;
-	var hoek = lat / long;
-	var hoek_bestemming = Math.atan(hoek)*(180/Math.PI);
+	var dlong = bestemming_long - position.coords.longitude;
+	var dlat = bestemming_lat - position.coords.latitude;
+	var hoek;
 	
-	if (lat > 0) {
-		if (long > 0) {
-			var bestemming_lat = hoek_bestemming;
-		}
-		if (long < 0) {
-			var bestemming_lat = -180 + hoek_bestemming;	
-		}
-		if (long = 0) {
-			var bestemming_lat = 90;
-		}
+	if (dlong == 0) {
+		hoek = 0;
 	}
-	if (lat < 0) {
-		if (long > 0) {
-			var bestemming_lat = -hoek_bestemming;
-		}
-		if (long < 0) {
-			var bestemming_lat = 180 - hoek_bestemming;	
-		}
-		if (long = 0) {
-			var bestemming_lat = -90;	
-		}
+	else {
+		hoek = dlat / dlong;
 	}
 	
-	if (lat = 0) {
-		if (long > 0) {
-			var bestemming_lat = 0;
+	var hoek_richting = Math.atan(hoek)*(180/Math.PI);
+	
+	if (dlong < 0) {
+			hoek_richting = 180 + hoek_richting;
+			
+	}
+	if (dlong > 0) {
+		if (dlat < 0) {
+			hoek_richting = 360 + hoek_richting;	
 		}
-		if (long < 0) {
-			var bestemming_lat = 180;	
+	}
+	if (dlong == 0) {
+		if (dlat > 0) {
+			hoek_richting = 90;
+		}
+		if (dlat < 0) {
+			hoek_richting = -90;	
 		}
 	}
 
-	var draaihoek = position.coords.heading + bestemming_lat;
+	var draaihoek = hoek_richting - position.coords.heading;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
 
