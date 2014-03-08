@@ -12,10 +12,9 @@ function keuze(bestemming) {
 }
 
 function getLocatie(position) {
-	bestemming_lat = plek[0][1];
-	bestemming_long = plek[0][2];
-	
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
+	position.coords.longitude = Math.round(position.coords.longitude*1000000)/1000000;
+	position.coords.latitude = Math.round(position.coords.latitude*1000000)/1000000;
 	var dlong = bestemming_long - position.coords.longitude;
 	var dlat = bestemming_lat - position.coords.latitude;
 	var hoek;
