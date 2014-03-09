@@ -4,17 +4,14 @@
 	width: 100%;
 	bottom: 0;	
 }
+
 .kompas {
     position: absolute;
-    width: 93%;
-    max-width: 400px;
-    height: auto;
+	width: 100%;
+	margin: auto;
+	padding: auto;
+	height: auto;
     margin: auto auto auto auto;
-    top: 78px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
 }
 #afstand {
     position: absolute;
