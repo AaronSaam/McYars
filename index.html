@@ -10,7 +10,7 @@
                                    		user-scalable=no">
 		
 		<title>ROERMOND:BUITEN</title>
-        <link rel="stylesheet" type="text/css" href="css/kompas.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         
 		<link rel="stylesheet" href="themes/Flat.min.css" />
 		<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css"/>
@@ -19,11 +19,16 @@
 		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
         
         <script src="js/index.js"></script>
+        <!--
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+        -->
         
 	</head>
     
 	<body>
-    	<div data-role="page" id='hoofdmenu'>
+    
+    	<div data-role="page" id='page_hoofdmenu'>
             <div data-role="header">
             	<div class="ui-title">ROERMOND:BUITEN</div>
             </div>
@@ -38,10 +43,14 @@
 	      				<h3>Informatie</h3>
 	      				<p>Informatie over de stad Roermond</p>
 	      			</a></li>
+                    <li><a href="#page_plek_info">
+	      				<h3>Plek info</h3>
+	      			</a></li>
       			</ul>	
         	</div>
             </div>
         </div>
+        
         <div data-role="page" id='hoofdmenu_keuzes'>
             <div data-role="header">
             	<div class="ui-title">ROERMOND:BUITEN</div>
@@ -50,35 +59,36 @@
        		<div data-role="content">
             
                 <ul data-role="listview" id='keuzes'>
-	    			<li><a href="kompas.html" onClick="keuze(0)">Munsterkerk</a></li>
-	   				<li><a href="kompas.html" onClick="keuze(1)">Sint-Christoffelkathedraal</a></li>
-                    <li><a href="kompas.html" onClick="keuze(2)">Minderbroederskerk</a></li>
-					<li><a href="kompas.html" onClick="keuze(3)">Stadhuis</a></li>
-					<li><a href="kompas.html" onClick="keuze(4)">De Kiosk</a></li>
-					<li><a href="kompas.html" onClick="keuze(5)">Ursulakapel</a></li>
-					<li><a href="kompas.html" onClick="keuze(6)">Caroluskapel</a></li>
-					<li><a href="kompas.html" onClick="keuze(7)">Steenen Trappen</a></li>
-					<li><a href="kompas.html" onClick="keuze(8)">Nationaal Indië-monument</a></li>
-					<li><a href="kompas.html" onClick="keuze(9)">Rattentoren</a></li>
-					<li><a href="kompas.html" onClick="keuze(10)">Synagoge</a></li>
-					<li><a href="kompas.html" onClick="keuze(11)">Bisschoppelijk Paleis</a></li>
-					<li><a href="kompas.html" onClick="keuze(12)">Historiehuis</a></li>
-					<li><a href="kompas.html" onClick="keuze(13)">Wegkruis met houten corpus</a></li>
-					<li><a href="kompas.html" onClick="keuze(14)">Pierre Cuypers</a></li>
-					<li><a href="kompas.html" onClick="keuze(15)">Jubileumfontein</a></li>
-					<li><a href="kompas.html" onClick="keuze(16)">De Ruivers</a></li>
-					<li><a href="kompas.html" onClick="keuze(17)">Emile Seipgens</a></li>
-					<li><a href="kompas.html" onClick="keuze(18)">Schinderhannes</a></li>
-					<li><a href="kompas.html" onClick="keuze(19)">Cuypershuis</a></li>
-					<li><a href="kompas.html" onClick="keuze(20)">Teeken en ambachtschool</a></li>
+	    			<li><a href="#page_kompas" onClick="keuze(0)">Munsterkerk</a></li>
+	   				<li><a href="#page_kompas" onClick="keuze(1)">Sint-Christoffelkathedraal</a></li>
+                    <li><a href="#page_kompas" onClick="keuze(2)">Minderbroederskerk</a></li>
+					<li><a href="#page_kompas" onClick="keuze(3)">Stadhuis</a></li>
+					<li><a href="#page_kompas" onClick="keuze(4)">De Kiosk</a></li>
+					<li><a href="#page_kompas" onClick="keuze(5)">Ursulakapel</a></li>
+					<li><a href="#page_kompas" onClick="keuze(6)">Caroluskapel</a></li>
+					<li><a href="#page_kompas" onClick="keuze(7)">Steenen Trappen</a></li>
+					<li><a href="#page_kompas" onClick="keuze(8)">Nationaal Indië-monument</a></li>
+					<li><a href="#page_kompas" onClick="keuze(9)">Rattentoren</a></li>
+					<li><a href="#page_kompas" onClick="keuze(10)">Synagoge</a></li>
+					<li><a href="#page_kompas" onClick="keuze(11)">Bisschoppelijk Paleis</a></li>
+					<li><a href="#page_kompas" onClick="keuze(12)">Historiehuis</a></li>
+					<li><a href="#page_kompas" onClick="keuze(13)">Wegkruis met houten corpus</a></li>
+					<li><a href="#page_kompas" onClick="keuze(14)">Pierre Cuypers</a></li>
+					<li><a href="#page_kompas" onClick="keuze(15)">Jubileumfontein</a></li>
+					<li><a href="#page_kompas" onClick="keuze(16)">De Ruivers</a></li>
+					<li><a href="#page_kompas" onClick="keuze(17)">Emile Seipgens</a></li>
+					<li><a href="#page_kompas" onClick="keuze(18)">Schinderhannes</a></li>
+					<li><a href="#page_kompas" onClick="keuze(19)">Cuypershuis</a></li>
+					<li><a href="#page_kompas" onClick="keuze(20)">Teeken en ambachtschool</a></li>
       			</ul>	
         	</div>
             </div>
         </div>
+        
         <div data-role="page" id="hoofdmenu_informatie">
             <div class="ui-btn-up-b" data-role="header">
                  <div class="ui-title">ROERMOND:BUITEN</div>
- 				 <a href="#hoofdmenu" style="" data-icon="arrow-l" data-role="button">Terug</a>
+ 				 <a href="#page_hoofdmenu" style="" data-icon="arrow-l" data-role="button">Terug</a>
             </div>
             
             <div data-role="content">
@@ -108,5 +118,77 @@
                 </form>
             </div>
         </div>
+        
+        
+        <div data-role="page" id="page_kompas">
+            <div data-role="header">
+                <a href="#page_hoofdmenu" data-icon="delete" data-role="button">Stop</a>
+            <h1>&nbsp;</h1>
+            </div>
+            
+            <div data-role="tabs">
+    			<div data-role="navbar">
+        			<ul>
+          				<li><a href="#tab_kompas" data-theme="a" data-ajax="false">Kompas</a></li>
+                        <li><a href="#tab_kaart" data-theme="a" data-ajax="false">Kaart</a></li>
+        			</ul>
+   				</div>
+   
+       			<div id="tab_kompas" class="ui-content">
+           			<img class="kompas" id="kompasbg" src="img/KompasGrijs.png">
+        			<img class="kompas" id="wijzer" src="img/KompasWijzer.png">
+            	</div>
+            
+            	<div id="tab_kaart" class="ui-content">
+           			[KAART]
+           		</div>
+        	</div>
+        </div> 
+        
+        
+        <div data-role="page" id="page_plek_info">
+            <div data-role="header"> <a href="index.html" data-icon="back" data-role="button">Terug</a>
+
+                 <h1>&nbsp;</h1>
+
+            </div>
+            <div class="ui-content">
+                <div class='plek_groep_naam' id='plek_naam'>Munsterkerk</div>
+               	<div class='plek_groep'>
+               		<div class='plek_sectie' id='plek_beschrijving'>
+                        <table>
+                            <td>De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</td>
+                        </table>
+      				</div>
+                </div>
+  				
+                <div class='plek_groep'>
+                    <div class='plek_sectie'>
+                        <table>
+                            <th>BOUWJAAR</th>
+                            <td id="plek_bouwjaar">16e eeuw</td>
+                        </table>
+                    </div>
+                    <div class='plek_sectie'>
+                        <table>
+                            <th>ARCHITECT</th>
+                            <td id="plek_architect">Pierre Cuypers, Jos Hermans</td>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class='plek_groep'>
+                    <div class='plek_groep_naam'>openingstijden</div>
+                    <div class='plek_sectie'>
+                        <table>
+                            <th>VANDAAG</th>
+                            <td>12:00 - 15:00</td>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 	</body>
+    
 </html>

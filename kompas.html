@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-	<head>
+    
+    <head>
         <meta name="viewport" content="width=device-width,
                              			initial-scale=1.0,
                               			maximum-scale=1.0,
                                    		user-scalable=no">
         <title>ROERMOND:BUITEN</title>
         <link rel="stylesheet" type="text/css" href="css/kompas.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css"  />
-        
-		<link rel="stylesheet" href="themes/Flat.min.css" />
-		<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" href="themes/Flat.min.css" />
+        <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css" />
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-		<script src="jquery/jquery-1.10.2.min.js"></script>
-		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
-		
-	</head>
+        <script src="jquery/jquery-1.10.2.min.js"></script>
+        <script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+    </head>
     
-	<body>
-    
-<!-- KOMPAS -->
-    	<div data-role="page" id="page_kompas">
-            <div data-role="header">
-                <a href="index.html" data-icon="delete" data-role="button">Stop</a>
-            <h1>&nbsp;</h1>
+    <body>
+        <div data-role="page">
+            <div data-role="header"> <a href="index.html" data-icon="delete" data-role="button">Stop</a>
+
+                 <h1>&nbsp;</h1>
+
             </div>
-            
-            <div data-role="navbar">
-            	<ul>
-					<li><a href="kaart.html">Kaart</a></li>
-					<li><a href="kompas.html" class="ui-btn-active ui-state-persist">Kompas</a></li>
-                    <li><a href="instellingen.html">Instellingen</a></li>
-				</ul>
-            </div>
-            
-       		<div data-role="content">
-           		<img class="kompas" id="kompasbg" src="img/KompasGrijs.png">
-        		<img class="kompas" id="wijzer" src="img/KompasWijzer.png">
+            <div class="ui-content">
+                <div class='plek_groep_naam' id='plek_naam'>Munsterkerk</div>
+               	<div class='plek_groep'>
+               		<div class='plek_sectie' id='plek_beschrijving'>
+                        <table>
+                            <td>De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</td>
+                        </table>
+      				</div>
+                </div>
+  				
+                <div class='plek_groep'>
+                    <div class='plek_sectie'>
+                        <table>
+                            <th>BOUWJAAR</th>
+                            <td id="plek_bouwjaar">16e eeuw</td>
+                        </table>
+                    </div>
+                    <div class='plek_sectie'>
+                        <table>
+                            <th>ARCHITECT</th>
+                            <td id="plek_architect">Pierre Cuypers, Jos Hermans</td>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class='plek_groep'>
+                    <div class='plek_groep_naam'>openingstijden</div>
+                    <div class='plek_sectie'>
+                        <table>
+                            <th>VANDAAG</th>
+                            <td>12:00 - 15:00</td>
+                        </table>
+                    </div>
+                </div>
+                
             </div>
         </div>
-		<script src="js/index.js" type="text/javascript"></script>
-	</body>
+    </body>
+
 </html>
