@@ -33,10 +33,23 @@ function keuze(bestemming) {
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
-	var dlong = bestemming_long - position.coords.longitude;
-	var dlat = bestemming_lat - position.coords.latitude;
+	var dlong;
+	var dlat;
 	var hoek;
+	if (position.coords.longitude < 0) {
+		dlong = bestemming_long + position.coords.longitude;
+	}
+	else {
+		dlong = bestemming_long - position.coords.longitude;
+	}
 	
+	if (position.coords.latitude < 0) {
+		dlat = bestemming_lat + position.coords.latitude;
+	}
+	else {
+		dlat = bestemming_lat - position.coords.latitude;	
+	}
+		
 	if (dlong == 0) {
 		hoek = 0;
 	}
