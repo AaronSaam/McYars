@@ -19,21 +19,18 @@
 		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
         <script src="js/plek.js"></script>
         <script src="js/index.js"></script>
-        <!--
-        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
-		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-        -->
         
 	</head>
     
 	<body>
     
     	<div data-role="page" id='page_hoofdmenu'>
+            <img src="img/RoermondBlur.png" class="bg">
             <div data-role="header">
             	<div class="ui-title">ROERMOND:BUITEN</div>
             </div>
             
-       		<div data-role="content">
+       		<div data-role="content" style="margin: 5px;">
             	<ul data-role="listview" id='hoofdkeuzes'>
 	    			<li><a href="#hoofdmenu_keuzes">
 	     				<h3>Begin Navigatie</h3>
@@ -52,11 +49,13 @@
         </div>
         
         <div data-role="page" id='hoofdmenu_keuzes'>
+            <img src="img/RoermondBlur.png" class="bg">
             <div data-role="header">
             	<div class="ui-title">ROERMOND:BUITEN</div>
+                <a href="#page_hoofdmenu" data-icon="arrow-l" data-role="button">Terug</a>
             </div>
             
-       		<div data-role="content">
+       		<div data-role="content" style="margin: 5px;">
             
                 <ul data-role="listview" id='keuzes'>
 	    			<li><a href="#page_kompas" onClick="keuze(0)">Munsterkerk</a></li>
@@ -86,44 +85,22 @@
         </div>
         
         <div data-role="page" id="hoofdmenu_informatie">
+        <img src="img/RoermondBlur.png" class="bg">
             <div class="ui-btn-up-b" data-role="header">
                  <div class="ui-title">ROERMOND:BUITEN</div>
  				 <a href="#page_hoofdmenu" style="" data-icon="arrow-l" data-role="button">Terug</a>
             </div>
             
-            <div data-role="content">
-				<p>Roermond is altijd een mooie/drukke stad geweest. Vroeger was Roermond een grote  handelsplaats. Nu nog steeds komen iedere dag duizenden mensen naar de  binnenstad van Roermond om te shoppen. In de binnenstad van Roermond staan ook nog prachtige oude gebouwen, die niet alleen de stad laten bloeien en kleur geven maar ook  haar geschiedenis verteld, die je overigens nog steeds kunt bezichtigen. Je kunt daarom in Roermond prachtige wandelroutes lopen. Deze app brengt die wandelroutes snel en makkelijk in beeld.<br><strong><em>Roermond, That's All You Need</em></strong>
-                </p>       
-            </div>
-           	<div class="pagebottom">
-                <ul data-role="listview">
-					<li><a href="#hoofdmenu_contact">
-        			<h3>Contact</h3>
-        			<p>Contact opnemen met ons? Doe het graag hier!</p>
-      				</a></li>
-            	</ul>
+            <div data-role="content" style="position: absolute; z-index: 1; background: #f9f9f9;margin: 5px;">Roermond is altijd een mooie/drukke stad geweest. Vroeger was Roermond een grote  handelsplaats. Nu nog steeds komen iedere dag duizenden mensen naar de  binnenstad van Roermond om te shoppen. In de binnenstad van Roermond staan ook nog prachtige oude gebouwen, die niet alleen de stad laten bloeien en kleur geven maar ook  haar geschiedenis verteld, die je overigens nog steeds kunt bezichtigen. Je kunt daarom in Roermond prachtige wandelroutes lopen. Deze app brengt die wandelroutes snel en makkelijk in beeld.<br><strong><em>Roermond, That's All You Need</em></strong>
             </div>
         </div>
-        
-        <div data-role="page" id="hoofdmenu_contact">
-            <div class="ui-btn-up-b" data-role="header">
-                 <div class="ui-title">ROERMOND:BUITEN</div>
- <a href="#hoofdmenu_informatie" data-icon="arrow-l" data-role="button">Terug</a>
 
-            </div>
-            <div data-role="content">       
-                <form action="McYars@hotmail.com" method="get" id="Contact">
-                    <textarea></textarea>
-                    <input name="Verzenden" type="submit" value="Verzenden" >
-                </form>
-            </div>
-        </div>
-        
         
         <div data-role="page" id="page_kompas">
+        <img src="img/RoermondBlur.png" class="bg">
             <div data-role="header">
                 <a href="#page_hoofdmenu" data-icon="delete" data-role="button">Stop</a>
-            <h1>&nbsp;</h1>
+            	<div class="ui-title">ROERMOND:BUITEN</div>
             </div>
             
             <div data-role="tabs">
@@ -147,12 +124,12 @@
         
         
         <div data-role="page" id="page_plek_info">
-            <div data-role="header"> <a href="index.html" data-icon="back" data-role="button">Terug</a>
-
-                 <h1>&nbsp;</h1>
-
+        <img src="img/RoermondBlur.png" class="bg">
+            <div data-role="header">
+            	<a href="index.html" data-icon="back" data-role="button">Terug</a>
+               	<div class="ui-title">ROERMOND:BUITEN</div>
             </div>
-            <div class="ui-content">
+            <div class="ui-content" style="position:absolute; color: white; z-index: 1;">
                 <div class='plek_groep_naam' id='plek_naam'>Munsterkerk</div>
                	<div class='plek_groep'>
                		<div class='plek_sectie' id='plek_beschrijving'>
