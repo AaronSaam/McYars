@@ -40,9 +40,6 @@
 	      				<h3>Informatie</h3>
 	      				<p>Informatie over de stad Roermond</p>
 	      			</a></li>
-                    <li><a href="#page_plek_info">
-	      				<h3>Plek info</h3>
-	      			</a></li>
       			</ul>	
         	</div>
             </div>
@@ -58,6 +55,7 @@
        		<div data-role="content" style="margin: 5px;">
             
                 <ul data-role="listview" id='keuzes'>
+                	<li style="margin-bottom: 4px;"><a href="#page_kompas" onClick="keuze(-1)">Willekeurig</a></li>
 	    			<li><a href="#page_kompas" onClick="keuze(0)">Munsterkerk</a></li>
 	   				<li><a href="#page_kompas" onClick="keuze(1)">Sint-Christoffelkathedraal</a></li>
                     <li><a href="#page_kompas" onClick="keuze(2)">Minderbroederskerk</a></li>
@@ -107,7 +105,7 @@
     			<div data-role="navbar">
         			<ul>
           				<li><a href="#tab_kompas" data-theme="a" data-ajax="false">Kompas</a></li>
-                        <li><a href="#tab_kaart" data-theme="a" data-ajax="false">Kaart</a></li>
+                        <li><a href="#tab_info" data-theme="a" data-ajax="false">Info</a></li>
         			</ul>
    				</div>
    
@@ -116,25 +114,19 @@
         			<img class="kompas" id="wijzer" src="img/KompasWijzer.png">
                 </div>
             
-            	<div id="tab_kaart" class="ui-content">
-           			[KAART]
-           		</div>
-        	</div>
-        </div> 
-        
-        
-        <div data-role="page" id="page_plek_info">
-        <img src="img/RoermondBlur.png" class="bg">
-            <div data-role="header">
-            	<a href="index.html" data-icon="back" data-role="button">Terug</a>
-               	<div class="ui-title">ROERMOND:BUITEN</div>
-            </div>
-            <div class="ui-content" style="position:absolute; color: white; z-index: 1;">
+            	<div id="tab_info" class="ui-content" style="position:absolute; color: white; z-index: 1;">
                 <div class='plek_groep_naam' id='plek_naam'>Munsterkerk</div>
+                <div class='plek_groep'>
+                    <div class='plek_sectie' style="border-top: white 2px solid;border-bottom: white 2px solid;background: none;">
+                        <table>
+                            <th id="plek_straat">MUNSTERPLEIN</th>
+                        </table>
+                    </div>
+                </div>
                	<div class='plek_groep'>
                		<div class='plek_sectie' id='plek_beschrijving'>
                         <table>
-                            <td>De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</td>
+                            <td >De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</td>
                         </table>
       				</div>
                 </div>
@@ -163,9 +155,9 @@
                         </table>
                     </div>
                 </div>
-                
+        		</div>
             </div>
-        </div>
+        </div> 
 	</body>
     
 </html>

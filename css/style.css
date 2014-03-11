@@ -56,10 +56,17 @@
     margin: -8px 0 0 0;
     color: white;
     background: transparent;
+	
 }
+
 #plek_beschrijving table td {
-    text-align: left;
+	text-align:left;
 }
+
+#plek_straat {
+	color: white;
+}
+
 .plek_groep {
     margin-bottom: 10px;
 }
