@@ -1,163 +1,117 @@
 <!DOCTYPE html>
-
 <html>
-
-	<head>
-    	<meta charset="utf-8">
+    
+    <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,
                              			initial-scale=1.0,
                               			maximum-scale=1.0,
                                    		user-scalable=no">
-		
-		<title>ROERMOND:BUITEN</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        
-		<link rel="stylesheet" href="themes/Flat.min.css" />
-		<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css"/>
-  		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-		<script src="jquery/jquery-1.10.2.min.js"></script>
-		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+        <title>ROERMOND:BUITEN</title>
+        <link rel="stylesheet" href="themes/Flat.css" />
+        <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <script src="jquery/jquery-1.10.2.min.js"></script>
+        <script src="jquery/jquery.mobile-1.4.2.min.js"></script>
         <script src="js/plek.js"></script>
         <script src="js/index.js"></script>
-        
-	</head>
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
     
-	<body>
-    
-    	<div data-role="page" id='page_hoofdmenu'>
-            <img src="img/RoermondBlur.png" class="bg">
-            <div data-role="header">
-            	<div class="ui-title">ROERMOND:BUITEN</div>
-            </div>
-            
-       		<div data-role="content" style="margin: 5px;">
-            	<ul data-role="listview" id='hoofdkeuzes'>
-	    			<li><a href="#hoofdmenu_keuzes">
-	     				<h3>Begin Navigatie</h3>
-	      				<p>Kies uit wandelroutes in Roermond</p>
-	      			</a></li>
-	   				<li><a href="#hoofdmenu_informatie">
-	      				<h3>Informatie</h3>
-	      				<p>Informatie over de stad Roermond</p>
-	      			</a></li>
-      			</ul>	
-        	</div>
-            </div>
-        </div>
-        
-        <div data-role="page" id='hoofdmenu_keuzes'>
-            <img src="img/RoermondBlur.png" class="bg">
-            <div data-role="header">
-            	<div class="ui-title">ROERMOND:BUITEN</div>
-                <a href="#page_hoofdmenu" data-icon="arrow-l" data-role="button">Terug</a>
-            </div>
-            
-       		<div data-role="content" style="margin: 5px;">
-            
-                <ul data-role="listview" id='keuzes'>
-                	<li style="margin-bottom: 4px;"><a href="#page_kompas" onClick="keuze(-1)">Willekeurig</a></li>
-	    			<li><a href="#page_kompas" onClick="keuze(0)">Munsterkerk</a></li>
-	   				<li><a href="#page_kompas" onClick="keuze(1)">Sint-Christoffelkathedraal</a></li>
-                    <li><a href="#page_kompas" onClick="keuze(2)">Minderbroederskerk</a></li>
-					<li><a href="#page_kompas" onClick="keuze(3)">Stadhuis</a></li>
-					<li><a href="#page_kompas" onClick="keuze(4)">De Kiosk</a></li>
-					<li><a href="#page_kompas" onClick="keuze(5)">Ursulakapel</a></li>
-					<li><a href="#page_kompas" onClick="keuze(6)">Caroluskapel</a></li>
-					<li><a href="#page_kompas" onClick="keuze(7)">Steenen Trappen</a></li>
-					<li><a href="#page_kompas" onClick="keuze(8)">Nationaal Indië-monument</a></li>
-					<li><a href="#page_kompas" onClick="keuze(9)">Rattentoren</a></li>
-					<li><a href="#page_kompas" onClick="keuze(10)">Synagoge</a></li>
-					<li><a href="#page_kompas" onClick="keuze(11)">Bisschoppelijk Paleis</a></li>
-					<li><a href="#page_kompas" onClick="keuze(12)">Historiehuis</a></li>
-					<li><a href="#page_kompas" onClick="keuze(13)">Wegkruis met houten corpus</a></li>
-					<li><a href="#page_kompas" onClick="keuze(14)">Pierre Cuypers</a></li>
-					<li><a href="#page_kompas" onClick="keuze(15)">Jubileumfontein</a></li>
-					<li><a href="#page_kompas" onClick="keuze(16)">De Ruivers</a></li>
-					<li><a href="#page_kompas" onClick="keuze(17)">Emile Seipgens</a></li>
-					<li><a href="#page_kompas" onClick="keuze(18)">Schinderhannes</a></li>
-					<li><a href="#page_kompas" onClick="keuze(19)">Cuypershuis</a></li>
-					<li><a href="#page_kompas" onClick="keuze(20)">Teeken en ambachtschool</a></li>
-      			</ul>	
-        	</div>
+    <body>
+  		<div data-role="page" id='hoofdmenu_keuzes'>
+            <header>ROERMOND</header>
+            <div class="page_title">Waar wil je heen?</div>
+           
+           	<div id="keuzelijst">
+            <ul data-role="listview">
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(-1)">Willekeurig</a>
+                </li>
+            </ul>&nbsp;
+            <ul data-role="listview">
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(0)">Munsterkerk</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(1)">Sint-Christoffelkathedraal</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(2)">Minderbroederskerk</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(3)">Stadhuis</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(4)">De Kiosk</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(5)">Ursulakapel</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(6)">Caroluskapel</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(7)">Steenen Trappen</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(8)">Nationaal Indië-monument</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(9)">Rattentoren</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(10)">Synagoge</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(11)">Bisschoppelijk Paleis</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(12)">Historiehuis</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(13)">Wegkruis met houten corpus</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(14)">Pierre Cuypers</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(15)">Jubileumfontein</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(16)">De Ruivers</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(17)">Emile Seipgens</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(18)">Schinderhannes</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(19)">Cuypershuis</a>
+                </li>
+                <li><a href="#page_kompas" data-transition="none" onClick="keuze(20)">Teeken en ambachtschool</a>
+                </li>
+            </ul>
             </div>
         </div>
-        
-        <div data-role="page" id="hoofdmenu_informatie">
-        <img src="img/RoermondBlur.png" class="bg">
-            <div class="ui-btn-up-b" data-role="header">
-                 <div class="ui-title">ROERMOND:BUITEN</div>
- 				 <a href="#page_hoofdmenu" style="" data-icon="arrow-l" data-role="button">Terug</a>
-            </div>
-            
-            <div data-role="content" style="position: absolute; z-index: 1; background: #f9f9f9;margin: 5px;">Roermond is altijd een mooie/drukke stad geweest. Vroeger was Roermond een grote  handelsplaats. Nu nog steeds komen iedere dag duizenden mensen naar de  binnenstad van Roermond om te shoppen. In de binnenstad van Roermond staan ook nog prachtige oude gebouwen, die niet alleen de stad laten bloeien en kleur geven maar ook  haar geschiedenis verteld, die je overigens nog steeds kunt bezichtigen. Je kunt daarom in Roermond prachtige wandelroutes lopen. Deze app brengt die wandelroutes snel en makkelijk in beeld.<br><strong><em>Roermond, That's All You Need</em></strong>
-            </div>
-        </div>
-
         
         <div data-role="page" id="page_kompas">
-        <img src="img/RoermondBlur.png" class="bg">
-            <div data-role="header">
-                <a href="#page_hoofdmenu" data-icon="delete" data-role="button">Stop</a>
-            	<div class="ui-title">ROERMOND:BUITEN</div>
+        	<a href="javascript: history.go(-1)" data-transition="none">
+            <div data-role="button" class="ui-btn button_menu">
+            	<img class="button_back" src="img/ic_action_previous_item.png">
             </div>
+            </a>
+
+            <header>ROERMOND</header>
+            <img class="kompas" src="img/achtergrondgrijs.png">
+            <img class="kompas" id="kompasbg" src="img/KompasBlauw.png">
+            <img class="kompas" id="wijzer" src="img/KompasWijzer.png">
             
-            <div data-role="tabs">
-    			<div data-role="navbar">
-        			<ul>
-          				<li><a href="#tab_kompas" data-theme="a" data-ajax="false">Kompas</a></li>
-                        <li><a href="#tab_info" data-theme="a" data-ajax="false">Info</a></li>
-        			</ul>
-   				</div>
-   
-                <div id="tab_kompas" style="position: absolute; margin: 10px 0 10px 0; left: 10px; right: 10px;">
-                    <img class="kompas" id="kompasbg" src="img/KompasGrijs.png">
-        			<img class="kompas" id="wijzer" src="img/KompasWijzer.png">
-                </div>
             
-            	<div id="tab_info" class="ui-content" style="position:absolute; color: white; z-index: 1;">
-                <div class='plek_groep_naam' id='plek_naam'>Munsterkerk</div>
-                <div class='plek_groep'>
-                    <div class='plek_sectie' style="border-top: white 2px solid;border-bottom: white 2px solid;background: none;">
-                        <table>
-                            <th id="plek_straat">MUNSTERPLEIN</th>
-                        </table>
-                    </div>
-                </div>
-               	<div class='plek_groep'>
-               		<div class='plek_sectie' id='plek_beschrijving'>
-                        <table>
-                            <td >De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</td>
-                        </table>
-      				</div>
-                </div>
-  				
-                <div class='plek_groep'>
-                    <div class='plek_sectie'>
-                        <table>
-                            <th>BOUWJAAR</th>
-                            <td id="plek_bouwjaar">16e eeuw</td>
-                        </table>
-                    </div>
-                    <div class='plek_sectie'>
-                        <table>
-                            <th>ARCHITECT</th>
-                            <td id="plek_architect">Pierre Cuypers, Jos Hermans</td>
-                        </table>
-                    </div>
-                </div>
+            <div id='plek_info_page'>
+            	<div id="plek_naam">Munsterkerk</div>
                 
-                <div class='plek_groep'>
-                    <div class='plek_groep_naam'>openingstijden</div>
-                    <div class='plek_sectie'>
-                        <table>
-                            <th>VANDAAG</th>
-                            <td>12:00 - 15:00</td>
-                        </table>
-                    </div>
+                <div id='plek_beschrijving'>De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</div>
+                
+                <div class="infosection">
+                <table id="plek_info">
+                <tr>
+                    <th><img src="img/Locatie.png"></th>
+                    <td id="plek_straat">Munsterplein</td>
+               	</tr>
+                <tr>
+                	<th><img src="img/Bouwjaar.png"></th>
+                    <td id="plek_bouwjaar">13e eeuw</td>
+              	</tr>
+                <tr>
+                	<th><img src="img/Architect.png"></th>
+                    <td id="plek_architect">Pierre Cuypers, Jos Hermans</td>
+                </tr>
+                </table>
                 </div>
-        		</div>
             </div>
-        </div> 
-	</body>
-    
+        </div>
+    </body>
+
 </html>

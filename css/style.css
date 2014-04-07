@@ -1,113 +1,112 @@
-@charset"utf-8";
-.pagebottom {
+@charset "utf-8";
+body {
+	font-family: Roboto, sans-serif;
+	background:url(../img/RoermondBlur.png);
+}
+.content {
+	z-index: 2;	
+}
+.button_menu {
+	margin: 0;
+	padding: 0;
+	
 	position: absolute;
-	width: 100%;
-	bottom: 0;
+	width: 18%;
+	max-width: 100px;
+	min-width: 30px;
+	height: 35px;
+	z-index: 2;
+	
+	top: 10px;
+	left: 0;
+	text-align: right;
+	border: 0;
+}
+.button_back {
+	min-width: 30px;
+	height: inherit;
+		
+}
+header {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 24px;
+	z-index: 0;	
+}
+.page_title {
+	font-size: 24px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	text-align: center;
+	font-family: "Roboto Light", Roboto, sans-serif;
+	font-weight: lighter;
 }
 
 .kompas {
-    position: absolute;
-	width: 100%;
+	position: absolute;
 	margin: auto;
-	padding: auto;
-	height: auto;
-    margin: auto auto auto auto;
-}
-#afstand {
-    position: absolute;
-	display: table;
-	vertical-align: center;
-	width: 93%;
-    max-width: 400px;
-    height: auto;
-    margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	color: white;
-    font-family: Roboto Light, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 30px;
-}
-#map {
-    position:absolute;
-    top: 78px;
-    bottom: 0;
-    width:100%;
-}
-#keuzes li a {
-    font-weight: normal;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 100%;
+	overflow: hidden;
 }
 #wijzer {
-    overflow: hidden;
+	overflow: hidden;	
 }
+
+
+
 #plek_naam {
-    margin-top: 5px;
-    margin-left: 2px;
-    padding-top: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-    text-align: left;
-    font-size: 28px;
-}
-#plek_beschrijving {
-    width: 100% - 20px;
-    margin: -8px 0 0 0;
-    color: white;
-    background: transparent;
-	
+	padding-top: 20px;
+	font-family: "Roboto Light", Roboto, sans-serif;
+	font-weight: lighter;
+	font-size: 24px;
 }
 
-#plek_beschrijving table td {
-	text-align:left;
-}
-
-#plek_straat {
-	color: white;
-}
-
-.plek_groep {
-    margin-bottom: 10px;
-}
-.plek_groep_naam {
-    padding-left: 10px;
-    font-size: 22px;
-    margin-bottom: -3px;
-}
-.plek_sectie {
-    background: white;
-    width: 100% - 20px;
-    padding: 5px 10px;
-    margin: 2px 10px 0 10px;
-    color: black;
-    overflow: hidden;
-}
-.plek_sectie table {
-    width: 100%;
-}
-.plek_sectie table th {
-    font-size: 12px;
-    font-weight: normal;
-    text-align: left;
-    width: auto;
-}
-.plek_sectie table td {
-    font-size: 15px;
-    font-weight: normal;
-    text-align: right;
-    width: auto;
-}
-
-.bg {
-	z-index: 0;
+#plek_info_page {
 	position: absolute;
-	top: 0;
+	top: 100%;
 	left: 0;
-	bottom: 0;
-	height: 100%;
-	width: auto;
-	overflow: hidden;
-	margin: auto;
+	right: 0;
+	margin-top: -60px;
+	padding: 10px 10px 0 10px;
+	min-height: 100%;
 }
-	
+
+#plek_beschrijving {
+	margin-top: 8px;	
+}
+
+.infosection {
+	position: relative;	
+	background: #F7F7F7;
+	padding: 10px;
+	margin: 20px -10px -10px -10px;
+}
+
+#plek_info {
+	height: 100%;
+	width: 100%;	
+}
+
+#plek_info td {
+	vertical-align: middle;
+	padding-left: 15px;
+	height: 55px;
+}
+
+#plek_info th{
+	width: 40px;
+	vertical-align: middle;
+	height: 55px;
+}
+#plek_info th img{
+	height: 45px;
+}
+
+#keuzelijst {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 90px;	
+}
