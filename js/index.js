@@ -21,7 +21,7 @@ function keuze(bestemming) {
 }
 
 function getLocatie(position) {
-	document.getElementById('kompasbg').src = "img/KompasGeel.png";
+	document.getElementById('kompasbg').src = "img/KompasBlauw.png";
 	var dlong = bestemming_long - position.coords.longitude;
 	var dlat = bestemming_lat - position.coords.latitude;	
 	var hoek;
