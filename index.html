@@ -17,101 +17,128 @@
         <script src="js/index.js"></script>
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
     </head>
     
     <body>
-  		<div data-role="page" class="page" id='hoofdmenu_keuzes'>
+        <div data-role="page" class="page" id='hoofdmenu_keuzes'>
             <header>ROERMOND</header>
             <div class="page_title">Waar wil je heen?</div>
-           
-           	<div id="keuzelijst">
-            <ul data-role="listview">
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(-1)">Willekeurig</a>
-                </li>
-            </ul>&nbsp;
-            <ul data-role="listview">
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(0)">Munsterkerk</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(1)">Sint-Christoffelkathedraal</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(2)">Minderbroederskerk</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(3)">Stadhuis</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(4)">De Kiosk</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(5)">Ursulakapel</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(6)">Caroluskapel</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(7)">Steenen Trappen</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(8)">Nationaal Indië-monument</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(9)">Rattentoren</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(10)">Synagoge</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(11)">Bisschoppelijk Paleis</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(12)">Historiehuis</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(13)">Wegkruis met houten corpus</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(14)">Pierre Cuypers</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(15)">Jubileumfontein</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(16)">De Ruivers</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(17)">Emile Seipgens</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(18)">Schinderhannes</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(19)">Cuypershuis</a>
-                </li>
-                <li><a href="#page_kompas" data-transition="none" onClick="keuze(20)">Teeken en ambachtschool</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-        
-        <div data-role="page" id="page_kompas">
-        	<div class="page">
-        	<a href="javascript: history.go(-1)" data-transition="none">
-            <div data-role="button" class="ui-btn button_menu">
-            	<img class="button_back" src="img/ic_action_previous_item.png">
-            </div>
-            </a>
+            <div id="keuzelijst">
+                <ul data-role="listview">
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(-1)">Willekeurig</a>
 
-            <header>ROERMOND</header>
-            <img class="kompasbg" src="img/achtergrondgrijs.png">
-            <img class="kompas" id="kompasbg" src="img/KompasGeel.png">
-            <img class="kompas" id="wijzer" src="img/KompasWijzer.png">
-            </div>
-            <div id='plek_info_page'>
-            	<div id="plek_naam">Munsterkerk</div>
-                
-                <div id='plek_beschrijving'>De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</div>
-                
-                <div class="infosection">
-                <table id="plek_info">
-                <tr>
-                    <th><img src="img/Locatie.png"></th>
-                    <td id="plek_straat">Munsterplein</td>
-               	</tr>
-                <tr>
-                	<th><img src="img/Bouwjaar.png"></th>
-                    <td id="plek_bouwjaar">13e eeuw</td>
-              	</tr>
-                <tr>
-                	<th><img src="img/Architect.png"></th>
-                    <td id="plek_architect">Pierre Cuypers, Jos Hermans</td>
-                </tr>
-                </table>
-                </div>
+                    </li>
+                </ul>&nbsp;
+                <ul data-role="listview">
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(0)">Munsterkerk</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(1)">Sint-Christoffelkathedraal</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(2)">Minderbroederskerk</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(3)">Stadhuis</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(4)">De Kiosk</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(5)">Ursulakapel</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(6)">Caroluskapel</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(7)">Steenen Trappen</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(8)">Nationaal Indië-monument</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(9)">Rattentoren</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(10)">Synagoge</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(11)">Bisschoppelijk Paleis</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(12)">Historiehuis</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(13)">Wegkruis met houten corpus</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(14)">Pierre Cuypers</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(15)">Jubileumfontein</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(16)">De Ruivers</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(17)">Emile Seipgens</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(18)">Schinderhannes</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(19)">Cuypershuis</a>
+
+                    </li>
+                    <li><a href="#page_kompas" data-transition="none" onClick="keuze(20)">Teeken en ambachtschool</a>
+
+                    </li>
+                </ul>
             </div>
         </div>
+        <div data-role="page" id="page_kompas">
+            <div class="page">
+            	<a href="javascript: history.go(-1)" data-transition="none">
+            		<div data-role="button" class="ui-btn button_menu">
+            			<img class="button_back" src="img/ic_action_previous_item.png">
+            		</div>
+           		</a>
+                <header>ROERMOND</header>
+                <img class="kompasbg" src="img/achtergrondgrijs.png">
+                <img class="kompas" id="kompasbg" src="img/KompasGeel.png">
+                <img class="kompas" id="wijzer" src="img/KompasWijzer.png">
+            </div>
+        <div id='page_info'>
+            <div id="plek_naam">Munsterkerk</div>
+           <!-- <div id='plek_beschrijving'>De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).</div>
+            <div class="infosection">
+                <table id="plek_info">
+                    <tr>
+                        <th>
+                            <img src="img/Locatie.png">
+                        </th>
+                        <td id="plek_straat">Munsterplein</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="img/Bouwjaar.png">
+                        </th>
+                        <td id="plek_bouwjaar">13e eeuw</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="img/Architect.png">
+                        </th>
+                        <td id="plek_architect">Pierre Cuypers, Jos Hermans</td>
+                    </tr>
+                </table>
+            </div>
+            <div id='map'></div>-->
+            </div>
+        </div>
+        <!--<script src="js/kaart.js"></script>-->
     </body>
 
 </html>
