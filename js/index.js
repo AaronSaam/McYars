@@ -13,10 +13,10 @@ function keuze(bestemming) {
 	bestemming_lat = plek[bestemming_keuze][1];
 	bestemming_long = plek[bestemming_keuze][2];
 	document.getElementById('plek_naam').innerHTML = plek[bestemming_keuze][0];
-	document.getElementById('plek_straat').innerHTML = plek[bestemming_keuze][3];
-	document.getElementById('plek_bouwjaar').innerHTML = plek[bestemming_keuze][4];
-	document.getElementById('plek_architect').innerHTML = plek[bestemming_keuze][5];
-	document.getElementById('plek_beschrijving').innerHTML = plek[bestemming_keuze][6];
+	document.getElementById('info_straat').innerHTML = plek[bestemming_keuze][3];
+	document.getElementById('info_bouwjaar').innerHTML = plek[bestemming_keuze][4];
+	document.getElementById('info_architect').innerHTML = plek[bestemming_keuze][5];
+	document.getElementById('info_beschrijving').innerHTML = plek[bestemming_keuze][6];
 	navigator.geolocation.watchPosition(getLocatie, errorLocatie, {frequency: 100, timeout: 5000, enableHighAccuracy: true});
 }
 

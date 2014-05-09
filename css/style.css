@@ -93,46 +93,34 @@ header {
 	z-index: 1;
 }
 
+#plek_naam {
+	padding-top: 10px;
+	font-family: "Roboto Light", Roboto, sans-serif;
+	font-size: 24px;
+	text-align: center;
+}
+
 	/* INFO */
-	#plek_naam {
-		padding-top: 10px;
-		font-family: "Roboto Light", Roboto, sans-serif;
-		font-size: 24px;
+	#section_info {
+		margin: 10px 5px;
+	}
+	
+	.infoblok {
+		font-size: 14px;	
+		margin: 5px 0;
+		padding: 10px 5px;
+		box-shadow: 0 0 2px #7F7F7F;
+	}
+	
+	#info_straat {
 		text-align: center;
+		border-top: #CCCCCC 1px solid;
+		border-bottom: #CCCCCC 1px solid;
+		padding: 4px 0;
+		margin-bottom: 8px;
+		box-shadow: none;
 	}
-	
-	.infosection {
-		position: relative;
-		background: #F7F7F7;
-		padding: 10px;
-		margin: 20px -10px -10px -10px;
-	}	
-
-	#plek_beschrijving {
-		margin-top: 5px;
-	}
-	
-	#plek_info {
-		height: 100%;
-		width: 100%;	
-	}
-	
-	#plek_info td {
-		vertical-align: middle;
-		padding-left: 15px;
-		height: 55px;
-	}
-
-	#plek_info th{
-		width: 40px;
-		vertical-align: middle;
-		height: 55px;
-	}
-	
-	#plek_info th img{
-		height: 45px;
-	}
-
+		
 	/* KAART */
 	#map {
 		width:100%;
