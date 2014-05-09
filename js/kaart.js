@@ -1,2 +1,1 @@
-var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
-    .setView([40, -74.50], 9);
+L.mapbox.map('map', 'mcyars.h5k43d07');
