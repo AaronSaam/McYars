@@ -59,7 +59,9 @@ header {
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 90px;	
+		padding: 10px;
+		top: 80px;
+		opacity: 0.9;
 	}
 	
 	/* KOMPAS */
@@ -109,16 +111,15 @@ header {
 		font-size: 14px;	
 		margin: 0 0 5px 0;
 		padding: 10px;
-		border: 1px solid #DDD;
+		/*border: 1px solid #DDD;*/
 	}
 	
 	#info_straat {
+		font-size: 14px;	
+		margin: 0 -6px 8px -6px;		
 		text-align: center;
-		border: none;
-		border-top: #ddd 1px solid;
-		border-bottom: #ddd 1px solid;
 		padding: 5px 0;
-		margin-bottom: 8px;
+		background: #F0F0F0;
 	}
 		
 	/* KAART */
