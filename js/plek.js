@@ -209,7 +209,7 @@ var plek = [
 ],
 
 //22
-['Maria Theresia Brug',
+['Maria Theresiabrug',
 51.194661,
 5.983575,
 'Brugstraat',
