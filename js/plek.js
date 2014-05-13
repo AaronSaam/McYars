@@ -206,5 +206,15 @@ var plek = [
 '20e eeuw',
 'J. van Lokhorst, L.H. Luijten, Jos Cuypers',
 'Teeken- en ambachtschool voor wetenschap en onderwijs.'
+],
+
+//22
+['Maria Theresia Brug',
+51.194661,
+5.983575,
+'Brugstraat',
+'18e eeuw',
+'De Monte',
+'Stenen Brug, oorspronkelijk uit 1348, maar gerenoveerd in 1771. Na ernstige oorlogsschade in 1955 herbouwd.'
 ]
 ];
