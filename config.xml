@@ -16,7 +16,6 @@
 		</author>
 		
 		<gap:platform name="android" />
-		<gap:platform name="ios" />
 		<icon src="img/Logo.png" />
 		<preference name="phonegap-version" value="3.3.0" />
 		<preference name="orientation" value="portrait" />
