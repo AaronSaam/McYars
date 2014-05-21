@@ -22,38 +22,47 @@ function keuze(bestemming) {
 
 function getLocatie(position) {
 	document.getElementById('kompasbg').src = "img/KompasGeel.png";
+	var location_mode = 0;
+	
 	var dlong = bestemming_long - position.coords.longitude;
+	if (dlong < 0) {
+		location_mode += 2;
+	}
+	
 	var dlat = bestemming_lat - position.coords.latitude;	
+	if (dlat > 0) {
+		location_mode += 1;
+	}
+	
 	var hoek;
 	
 	if (dlong == 0) {
 		hoek = 0;
 	}
 	else {
-		hoek = dlat / dlong;
+		hoek = dlong / dlat;
+	}
+		
+	hoek = Math.atan(hoek) * 180 / Math.PI;
+	
+	if (hoek > 90) {
+	alert('Er is iets misgegaan. Vermeld a.u.b. uw locatie in uw feedback.');
+	};
+	
+	if (location_mode == 0) {
+		hoek = 360 + hoek;
+	}
+	if (location_mode == 1) {
+		hoek = 90 - hoek;
+	}
+	if (location_mode == 2) {
+		hoek = 270 - hoek;	
+	}
+	if (location_mode == 3) {
+		hoek = 180 + hoek;	
 	}
 	
-	var hoek_richting = Math.atan(hoek) * 180 / Math.PI;
-	
-	if (dlong < 0) {
-			hoek_richting = 180 + hoek_richting;
-			
-	}
-	if (dlong > 0) {
-		if (dlat < 0) {
-			hoek_richting = 360 + hoek_richting;	
-		}
-	}
-	if (dlong == 0) {
-		if (dlat > 0) {
-			hoek_richting = 90;
-		}
-		if (dlat < 0) {
-			hoek_richting = -90;	
-		}
-	}
-
-	var draaihoek = hoek_richting - position.coords.heading;
+	var draaihoek = hoek - position.coords.heading;
 	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
 }
 
