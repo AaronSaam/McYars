@@ -62,8 +62,8 @@ function getLocatie(position) {
 		hoek = 180 + hoek;	
 	}
 	
-	var draaihoek = hoek - position.coords.heading;
-	$('#wijzer').css('-webkit-transform', 'rotate(' + draaihoek + 'deg)');
+	//var draaihoek = hoek - position.coords.heading;
+	$('#wijzer').css('-webkit-transform', 'rotate(' + hoek + 'deg)');
 }
 
 function errorLocatie(position) {
