@@ -7,6 +7,8 @@
                              			initial-scale=1.0,
                               			maximum-scale=1.0,
                                    		user-scalable=no">
+                                        
+                                        
         <title>ROERMOND:BUITEN</title>
         <link rel="stylesheet" href="themes/Flat.css" />
         <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.2.min.css" />
@@ -22,10 +24,34 @@
     </head>
     
     <body>
+        <div data-role="page" class="page" id='hoofdmenu'>
+        <div class="bg-gradient"></div>
+            <div class="keuzebody">
+            	<img class="header"src="img/RB.png">
+        		<a href="#hoofdmenu_keuzes" data-transition="none">
+                <div id="btn-start">
+                <h1>Start wandeling</h1>
+        		</div>
+                </a>
+                <div id="btn-info-roermond">
+                Roermond is een levendige stad, die zeer centraal gelegen is. De stad kent een verrassend rijk verleden, vooral in de middelleeuwen qua handel en nijverheid. Roermond kent een uitgebreid en divers aanbod op het gebied van winkelen en horeca. Van diverse gigantische winkelcentra tot een gezellige binnenstad met een ruim aanbod aan terrassen en restaurants. Daarnaast versiert Roermond vele monumentale gebouwen, imposante kerken en prachtige pleinen die een rijk verleden met zich meedragen.
+
+De combinatie van natuur, watersport, cultuur en shoppen en maakt Roermond tot een unieke stad, die absoluut de moeite waard is om eens te bezoeken.
+        		</div>
+        	</div>
+        </div>
+        
+        
         <div data-role="page" class="page" id='hoofdmenu_keuzes'>
-            <header>ROERMOND</header>
-            <div class="page_title">Waar wil je heen?</div>
-            <div id="keuzelijst">
+            <div class="bg-gradient"></div>
+            <div class="keuzebody">
+            <a href="javascript: history.go(-1)" data-transition="none">
+            <div class="keuzeheader">
+            <img class="header"src="img/RB.png">
+            <img class="page_title" src="img/Waar wilt u heen.png">
+            </div>
+            </a>
+                <div id="keuzelijst">
                 <ul data-role="listview">
                     <li><a href="#page_kompas" data-transition="none" onClick="keuze(-1)">Willekeurig</a>
 
@@ -99,17 +125,19 @@
 
                     </li>
                 </ul>
+                </div>
             </div>
         </div>
         <div data-role="page" id="page_kompas">
+            <img class="kompasbg" src="img/achtergrondgrijs.png">
             <div class="page">
+                
             	<a href="javascript: history.go(-1)" data-transition="none">
             		<div data-role="button" class="ui-btn button_menu">
             			<img class="button_back" src="img/ic_action_previous_item.png">
             		</div>
            		</a>
-                <header>ROERMOND</header>
-                <img class="kompasbg" src="img/achtergrondgrijs.png">
+                <div class="bg-gradient"></div>
                 <img class="kompas" id="kompasbg" src="img/KompasGeel.png">
                 <img class="kompas" id="wijzer" src="img/KompasWijzer.png">
             </div>

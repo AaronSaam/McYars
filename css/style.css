@@ -25,23 +25,41 @@ body {
 	height: inherit;
 		
 }
-
-header {
-	padding-top: 15px;
-	padding-bottom: 10px;
-	text-align: center;
-	font-size: 24px;
-	z-index: 0;	
+.header {
+	width: 90%;
+	height: auto;
+	display: block;
+	margin: 15px auto 10px auto;
 }
 
 .page_title {
-	font-size: 24px;
-	padding-top: 5px;
-	padding-bottom: 15px;
-	text-align: center;
-	font-family: "Roboto Light", Roboto, sans-serif;
-	font-weight: lighter;
+	width: 200px;
+	height: auto;
+	display: block;
+	margin: 5px auto 10px auto;
 }
+
+#btn-start {
+	background-color: rgba(255,255,255,0.42);
+	width: 100%;
+	height: 200px;
+	margin: 10px auto 5px auto;
+	text-decoration: none;
+}
+
+h1 {
+	text-align: center;	
+	font-size: 28px;
+	font-weight: normal;
+	font-style:
+}
+
+#btn-info-roermond {
+	background-color: rgba(255,255,255,0.42);
+	width: 100%;
+	margin: 5px auto 10px auto;
+}
+
 
 /* PAGINA */
 .page {
@@ -49,20 +67,32 @@ header {
 	top: 0; left: 0; bottom: 0; right: 0;
 	width: 100%;
 	height: 100%;
-	background-image:url(../img/Bg_kathedraal.jpg);
+	background-image:url(../img/Bg_kathedraal3.jpg);
 	background-size:cover;
+	background-position: center;
 	z-index: 0;
 }
-	
+
+.bg-gradient {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-image:url(../img/gradient.png);
+	background-size: cover;
+	z-index: -1;
+}
+
+.keuzebody {
+	margin: 5px 10px 0 10px;	
+}
+
 	/* KEUZES */
 	#keuzelijst {
-		position: absolute;
-		left: 0;
-		right: 0;
-		padding: 10px;
-		top: 80px;
-		opacity: 0.9;
+		opacity: 0.8;
+		
 	}
+	
 	
 	/* KOMPAS */
 	.kompas {
