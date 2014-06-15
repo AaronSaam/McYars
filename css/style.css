@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-	font-family: Roboto, sans-serif;
+	font-family: Helvetica, Roboto, sans-serif;
 }
 
 /* MENU */
@@ -89,7 +89,7 @@ h1 {
 
 	/* KEUZES */
 	#keuzelijst {
-		opacity: 0.8;
+		
 		
 	}
 	
@@ -127,7 +127,7 @@ h1 {
 
 #plek_naam {
 	padding-top: 10px;
-	font-family: "Roboto Light", Roboto, sans-serif;
+	font-family: Helvetica, "Roboto Light", Roboto, sans-serif;
 	font-size: 24px;
 	text-align: center;
 }
