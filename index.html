@@ -25,10 +25,10 @@
     
     <body>
         <div data-role="page" class="page" id='hoofdmenu'>
-        <div class="bg-gradient"></div>
             <div class="keuzebody">
             	<img class="header"src="img/RB.png">
-        		<a href="#hoofdmenu_keuzes" data-transition="none">
+        		<div class="bg-gradient"></div>
+                <a href="#hoofdmenu_keuzes" data-transition="none">
                 <div id="btn-start">
                 <h1>Start wandeling</h1>
         		</div>
@@ -43,7 +43,7 @@ De combinatie van natuur, watersport, cultuur en shoppen en maakt Roermond tot e
         
         
         <div data-role="page" class="page" id='hoofdmenu_keuzes'>
-            <div class="bg-gradient"></div>
+            
             <div class="keuzebody">
             <a href="javascript: history.go(-1)" data-transition="none">
             <div class="keuzeheader">
@@ -51,6 +51,7 @@ De combinatie van natuur, watersport, cultuur en shoppen en maakt Roermond tot e
             <img class="page_title" src="img/Waar wilt u heen.png">
             </div>
             </a>
+            <div class="bg-gradient"></div>
                 <div id="keuzelijst">
                 <ul data-role="listview">
                     <li><a href="#page_kompas" data-transition="none" onClick="keuze(-1)">Willekeurig</a>
