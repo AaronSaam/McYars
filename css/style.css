@@ -41,10 +41,8 @@ body {
 
 #btn-start {
 	background-color: rgba(255,255,255,0.42);
-	width: 100%;
-	height: 200px;
-	margin: 10px auto 5px auto;
 	text-decoration: none;
+	vertical-align: center;
 }
 
 h1 {
@@ -121,13 +119,13 @@ h1 {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background: white;
+	background-color: rgba(255,255,255,0.7);
 	z-index: 1;
 }
 
 #plek_naam {
 	padding-top: 10px;
-	font-family: Helvetica, "Roboto Light", Roboto, sans-serif;
+	font-family: "Helvetica Light", "Roboto Light", Helvetica, Roboto, sans-serif;
 	font-size: 24px;
 	text-align: center;
 }
@@ -141,7 +139,6 @@ h1 {
 		font-size: 14px;	
 		margin: 0 0 5px 0;
 		padding: 10px;
-		/*border: 1px solid #DDD;*/
 	}
 	
 	#info_straat {
@@ -149,7 +146,6 @@ h1 {
 		margin: 0 -6px 8px -6px;		
 		text-align: center;
 		padding: 5px 0;
-		background: #F0F0F0;
 	}
 		
 	/* KAART */
@@ -157,15 +153,3 @@ h1 {
 		height: 150px;
 		max-height: 30vw;
 	}
-
-.schaduw {
-	width: 100%;
-	height: 10px;
-	background-image:url(../img/schaduw.png);
-	background-repeat:repeat-x;
-}
-
-#shade_info {
-	position: absolute;
-	bottom: 44px;	
-}

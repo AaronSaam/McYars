@@ -3,7 +3,7 @@ var plek = [
 ['Munsterkerk',
 51.193611,
 5.988611,
-'MUNSTERPLEIN',
+'Munsterplein',
 '13e eeuw',
 'Pierre Cuypers, Jos Hermans',
 'De enige kerk in Nederland met een laat-Romaanse bouwstijl. De Munsterkerk bevat naast zijn prachtige bouwstijl ook het praalgraf van zijn stichters (Gerard van Gelre en zijn vrouw Margaretha van Brabant).'
